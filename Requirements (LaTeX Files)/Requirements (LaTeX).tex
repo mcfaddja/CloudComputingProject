@@ -1,33 +1,47 @@
 \documentclass{article}[10pt]
-\setlength{\textheight}{8.75in}
-\setlength{\topmargin}{-.25in}
-\setlength{\oddsidemargin}{-.5in}
+\voffset = 0.35in
+\hoffset = -0.1in
+\setlength{\textheight}{8.5in}
+\setlength{\topmargin}{-0.0in}
+\setlength{\oddsidemargin}{0.5in}
 \setlength{\evensidemargin}{0in}
-\setlength{\textwidth}{7.25in}
+\setlength{\textwidth}{6.25in}
 \usepackage{amsfonts, amsmath, amsthm, amssymb,mathrsfs}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{setspace}
+\usepackage{layout}
 \usepackage{xcolor}
 \usepackage{mathtools}
 \usepackage[]{algorithm2e}
 \usepackage{algorithmicx}
 \usepackage{multicol}
 \pagestyle{fancy}
-\lhead{TCSS 544 - Spring 2016}
-\chead{\textbf{Clustering and \\ Dimensional Reduction Project}}
-\rhead{J. McFadden}
-\headsep = 22pt 
+\lhead{TCSS 562 - Sp. '17}
+\chead{\textbf{Comparison of NoSQL on the Cloud \\ Software, Systems and Platforms}}
+\rhead{Term Project}
+\headsep = 25pt 
 \headheight = 15pt
+%\setlength{\footskip}{-15pt}
 
-%\title{Comparison of Cloud NoSQL Software, Systems and Platforms}
-%\date{June 4, 2016}
-%\author{J. McFadden \\ Univ. of Washington: Tacoma \\ Tacoma, WA \\ mcfaddja@uw.edu \and Y. Tamta \\ Univ. of Washington: Tacoma \\ Tacoma, WA \\ yashaswitamta@gmail.com \and J. N. Gandhi \\ Univ. of Washington: Tacoma \\ Tacoma, WA \\ jugalg@uw.edu }
 
 %\doublespacing
 %\singlespacing
 
 % BEGIN PRE-AMBLE
+\usepackage[hang,bottom,flushmargin]{footmisc}
+
+\usepackage[footnotesep=0.3in]{geometry}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[flushmargin]{footmisc}
+
+\addtolength{\footnotesep}{-0.1in} % change to 1mm
+
+\renewcommand{\thefootnote}{\textbf{\arabic{footnote}}}
+
+
 
 
 % Setup equation numbering 
@@ -101,9 +115,6 @@
 \begin{document}
 \thispagestyle{empty}
 
-%\maketitle
-%\begin{titlepage}
-%	\centering
 $\phantom{1}$ \\
 \vspace{0.2in}
 \begin{center}
@@ -136,8 +147,8 @@ $\phantom{1}$ \\
 	\small{\emph{Project coordinator indicated by \textbf{*}}}
 \end{center}
 
+
 \vspace{0.9in}
-%\end{titlepage}
 
 
 
@@ -154,7 +165,7 @@ The software/systems chosen for comparison in this project are two different NoS
 
 
 
-%\section{Software, Platforms, \& Systems}
+
 \section{Systems and Platforms}
 \begin{spacing}{1.5}
 We will be using two NoSQL database software packages.  The first software package is \textbf{DynamoDB} from Amazon Web Services (\emph{AWS}), while the second software package will be \textbf{Cassandra}, an open-source NoSQL database software package.  These software packages will be deployed using several different systems and platforms, as described below.
@@ -164,7 +175,7 @@ We will be using two NoSQL database software packages.  The first software packa
 
 \subsection{Systems}
 \begin{spacing}{1.5}
-This project will use four different systems for running these software packages.  These systems range from hosted \emph{SaaS} through various degrees of virtualization and then, finally, to non-virtualized machines.  These systems are 
+This project will run the software packages on four different systems (\emph{or types of systems}).  We have chosen systems which range from hosted \emph{SaaS} through various degrees of virtualization and then all the way to non-virtualized machines.  These systems are as follows
 
 \begin{itemize}
 	\item \textbf{AWS \emph{SaaS} system(s)}
@@ -173,7 +184,7 @@ This project will use four different systems for running these software packages
 	\item \textbf{Dedicated, non-virtualized machines}
 \end{itemize}
 
-These four systems will be deployed on to several different platforms.  Thus, we will now move on to describing the platforms that will be used to deploy these systems.
+These four systems will be deployed using several different platforms which we will describe in the next part of this section.
 \end{spacing}
 
 
@@ -181,18 +192,21 @@ These four systems will be deployed on to several different platforms.  Thus, we
 
 \subsection{Platforms}
 \begin{spacing}{1.5}
-We have chosen three different platforms on which to deploy the software packages, with the platforms spanning the range of cloud service paradigms from \emph{SaaS} to \emph{PaaS}\footnote{\textbf{PaaS :} Platform as a service.} to \emph{IaaS}\footnote{\textbf{IaaS :} Infrastructure as a service.}.  These platforms are 
+We have chosen three different platforms on which to deploy our systems.  The chosen platforms span the range of cloud service paradigms from \emph{SaaS} to \emph{PaaS}\footnote{\textbf{PaaS :} Platform as a service.} to \emph{IaaS}\footnote{\textbf{IaaS :} Infrastructure as a service.}.  We list the three platforms, along with two variations on one of the platforms, below
 
 \begin{itemize}
 	\item \textbf{AWS's DynamoDB Service (}\emph{SaaS}\textbf{)}
-	\item \textbf{Containerized implementations (}using \emph{Docker}\textbf{)} running on
+	\item \textbf{Containerized implementations (}using \emph{Docker}\textbf{) running on}
 	\begin{itemize}
 		\item \textbf{\emph{AWS's Container Service} (}\emph{PaaS}\textbf{)}
 		\item \textbf{\emph{AWS EC2 Machines running the docker run-time in Linux} (}hybrid \emph{Pass/IaaS}\textbf{)}
 	\end{itemize}
 	\item \textbf{AWS EC2 Machines running native installations of the software in Linux (}\emph{IaaS}\textbf{)}
 \end{itemize}
+
+In the next section, we list which systems will run each software package, along with a explanation why each software-system pairing was chosen.  Additionally, we will describe which platforms will be used to deploy each system and why those deployment choices were made.
 \end{spacing}
+
 
 
 
