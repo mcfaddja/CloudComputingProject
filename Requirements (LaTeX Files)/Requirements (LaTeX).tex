@@ -1,9 +1,9 @@
-\documentclass{article}[10pt]
+\documentclass{article}[12pt]
 \voffset = 0.35in
-\hoffset = -0.1in
+\hoffset = -0.20in
 \setlength{\textheight}{8.5in}
 \setlength{\topmargin}{-0.0in}
-\setlength{\oddsidemargin}{0.5in}
+\setlength{\oddsidemargin}{-0.0in}
 \setlength{\evensidemargin}{0in}
 \setlength{\textwidth}{6.25in}
 \usepackage{amsfonts, amsmath, amsthm, amssymb,mathrsfs}
@@ -23,6 +23,8 @@
 \headsep = 25pt 
 \headheight = 15pt
 %\setlength{\footskip}{-15pt}
+%\marginparsep = 0in
+%\marginparwidth = 0in
 
 
 %\doublespacing
@@ -33,9 +35,9 @@
 
 \usepackage[footnotesep=0.3in]{geometry}
 
-\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
 
-\usepackage[flushmargin]{footmisc}
+%\usepackage[flushmargin]{footmisc}
 
 \addtolength{\footnotesep}{-0.1in} % change to 1mm
 
@@ -109,8 +111,8 @@
 
 
 % END PRE-AMBLE
-\renewcommand{\baselinestretch}{1.0} 
-
+%\renewcommand{\baselinestretch}{1.0} 
+\setlength{\columnsep}{0.20in}
 
 \begin{document}
 \thispagestyle{empty}
@@ -153,8 +155,8 @@ $\phantom{1}$ \\
 
 
 
-\begin{multicols}{2}
-\begin{flushleft}
+\begin{multicols*}{2}
+%\begin{flushleft}
 
 
 \section*{Abstract}
@@ -210,7 +212,11 @@ In the next section, we list which systems will run each software package, along
 
 
 
+
 \section{Deployment}
+\begin{spacing}{1.5}
+We will 
+\end{spacing}
 
 
 
@@ -231,8 +237,30 @@ In the next section, we list which systems will run each software package, along
 
 
 
-\end{flushleft}
-\end{multicols}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\end{flushleft}
+\end{multicols*}
 
 
 
