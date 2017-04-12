@@ -1,0 +1,267 @@
+\documentclass{article}[10pt]
+\setlength{\textheight}{8.75in}
+\setlength{\topmargin}{-.25in}
+\setlength{\oddsidemargin}{-.5in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{7.25in}
+\usepackage{amsfonts, amsmath, amsthm, amssymb,mathrsfs}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage[]{algorithm2e}
+\usepackage{algorithmicx}
+\usepackage{multicol}
+\pagestyle{fancy}
+\lhead{TCSS 544 - Spring 2016}
+\chead{\textbf{Clustering and \\ Dimensional Reduction Project}}
+\rhead{J. McFadden}
+\headsep = 22pt 
+\headheight = 15pt
+
+%\title{Comparison of Cloud NoSQL Software, Systems and Platforms}
+%\date{June 4, 2016}
+%\author{J. McFadden \\ Univ. of Washington: Tacoma \\ Tacoma, WA \\ mcfaddja@uw.edu \and Y. Tamta \\ Univ. of Washington: Tacoma \\ Tacoma, WA \\ yashaswitamta@gmail.com \and J. N. Gandhi \\ Univ. of Washington: Tacoma \\ Tacoma, WA \\ jugalg@uw.edu }
+
+%\doublespacing
+%\singlespacing
+
+% BEGIN PRE-AMBLE
+
+
+% Setup equation numbering 
+\numberwithin{equation}{section} 
+
+%Equation Numbering Shortcut Commands
+\newcommand{\numbch}[1]{\setcounter{section}{#1} \setcounter{equation}{0}}
+\newcommand{\numbpr}[1]{\setcounter{subsection}{#1} \setcounter{equation}{0}}
+\newcommand{\note}{\textbf{NOTE:  }}
+
+%Formatting shortcut commands
+\newcommand{\chap}[1]{\begin{center}\begin{Large}\textbf{\underline{#1}}\end{Large}\end{center}}
+\newcommand{\prob}[1]{\textbf{\underline{Problem #1):}}}
+\newcommand{\sol}[1]{\textbf{\underline{Solution #1):}}}
+\newcommand{\MMA}{\emph{Mathematica }}
+
+%Text Shortcut Command
+\newcommand{\s}[1]{\emph{Side #1}}
+
+% Math shortcut commands
+\newcommand{\dd}[2]{\frac{d #1}{d #2}}
+\newcommand{\ddn}[3]{\frac{d^{#1} #2}{d #3^{#1}}}
+%\newcommand{\dd}[2]{\frac{\textrm{d} #1}{\textrm{d} #2}}
+%\newcommand{\ddn}[3]{\frac{\textrm{d}^{#1} #2}{\textrm{d} #3^{#1}}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdn}[3]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+\newcommand{\infint}{\int_{-\infty}^\infty}
+\newcommand{\infiint}{\iint_{-\infty}^\infty}
+\newcommand{\infiiint}{\iiint_{-\infty}^\infty}
+\newcommand{\dint}[2]{\int_{#1}^{#2}}
+\newcommand{\intdd}[1]{\textrm{d}#1}
+\newcommand{\intddd}[1]{\textrm{d}#1}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+%\newcommand{\mat}[1]{\overleftrightarrow{\mathbf{#1}}}
+%\newcommand{\mat}[1]{\bar{\bar{\mathbf{#1}}}}
+\newcommand{\mat}[1]{\overline{\overline{\mathbf{#1}}}}
+
+%Math Text
+\newcommand{\rect}{\text{ rect}}
+\newcommand{\csch}{\text{ csch}}
+
+%Physics Shortcut Commands
+\newcommand{\h}{\mathcal{H}}
+
+
+%MRI Stuff Shortcut Commands
+\newcommand{\tno}{t_{n}}
+\newcommand{\tn}[1]{t_{n#1}}
+\newcommand{\Mno}{\vec{M}^{\left( n \right)}}
+\newcommand{\Mn}[1]{\vec{M}^{\left( n #1 \right)}}
+\newcommand{\Mnto}[1]{\vec{M}^{(n)} \left( t_{n} #1 \right)}
+\newcommand{\Mnt}[2]{\vec{M}^{(n #1)} \left( t_{n #1} #2 \right)}
+\newcommand{\rot}[2]{\mat{R}_{#1} \left( #2 \right)}
+\newcommand{\DnMat}[2]{\mat{D} \left( t_{n #1} #2 \right)}
+\newcommand{\rotINV}[2]{\mat{R}^{-1}_{#1} \left( #2 \right)}
+\newcommand{\DnMatINV}[2]{\mat{D}^{-1} \left( t_{n #1} #2 \right)}
+\newcommand{\betaNt}[2]{\beta \left( t_{n #1} #2 \right)}
+\newcommand{\TR}{\textrm{TR}}
+
+
+% Math formatting commands
+\newcommand{\stack}[2]{\stackrel{\mathclap{\normalfont\mbox{#1}}}{#2}}
+
+
+% END PRE-AMBLE
+\renewcommand{\baselinestretch}{1.0} 
+
+
+\begin{document}
+\thispagestyle{empty}
+
+%\maketitle
+%\begin{titlepage}
+%	\centering
+$\phantom{1}$ \\
+\vspace{0.2in}
+\begin{center}
+	\Huge{\textbf{\underline{Comparison of NoSQL on the Cloud}}} \\
+	\vspace{0.10in}
+	\Huge{\textbf{\underline{Software, Systems and Platforms}}} \\
+	\vspace{0.20in}
+	\begin{multicols}{3}
+		\Large{\textbf{J. McFadden}} \\
+		\vspace{0.1in} 
+		\normalsize{Univ. of Washington: Tacoma} \\ \small{Tacoma, WA} \\ 
+		\vspace{0.05in}
+		\large{\emph{mcfaddja@uw.edu}}  \\
+		
+		\Large{\textbf{Y. Tamta}} \\ 
+		\vspace{0.1in} 
+		\normalsize{Univ. of Washington: Tacoma} \\ \small{Tacoma, WA} \\ 
+		\vspace{0.05in} 
+		\large{\emph{yashaswitamta@gmail.com}} \\
+		
+        		\Large{\textbf{J. N. Gandhi}} \\
+		\vspace{0.1in} 
+		\normalsize{Univ. of Washington: Tacoma} \\ \small{Tacoma, WA} \\ 
+		\vspace{0.05in} 
+		\large{\emph{jugalg@uw.edu}}
+	\end{multicols}
+	\vspace{0.3in}
+	\Large{\textbf{\underline{April 11, 2017}}} \\
+	\vspace{0.1in}
+	\small{\emph{Project coordinator indicated by \textbf{*}}}
+\end{center}
+
+\vspace{0.9in}
+%\end{titlepage}
+
+
+
+
+\begin{multicols}{2}
+\begin{flushleft}
+
+
+\section*{Abstract}
+\begin{spacing}{1.5}
+The software/systems chosen for comparison in this project are two different NoSQL database system.  These systems will be deployed/run/operated in several different ways.  These include \emph{SaaS}\footnote{\textbf{SaaS :} Software as a service.} implementations, \emph{containerized} implementations, and \emph{native installations}.  The goal of the project is to understand the performance characteristics of each deployment method \emph{\textbf{and}} to quantify the costs of each deployment method.  These costs will be calculated based on the hourly cost to operate, the initial time \& costs required for setup, and the maintenance requirement of a deployment.  Additionally, performance of the systems and deployments will be measured using the time required to carry out various database operations, under a set of several different conditions, as well as the CPU, memory, and network loads imposed by the various deployments under the same set of conditions.
+\end{spacing}
+
+
+
+
+%\section{Software, Platforms, \& Systems}
+\section{Systems and Platforms}
+\begin{spacing}{1.5}
+We will be using two NoSQL database software packages.  The first software package is \textbf{DynamoDB} from Amazon Web Services (\emph{AWS}), while the second software package will be \textbf{Cassandra}, an open-source NoSQL database software package.  These software packages will be deployed using several different systems and platforms, as described below.
+\end{spacing}
+
+
+
+\subsection{Systems}
+\begin{spacing}{1.5}
+This project will use four different systems for running these software packages.  These systems range from hosted \emph{SaaS} through various degrees of virtualization and then, finally, to non-virtualized machines.  These systems are 
+
+\begin{itemize}
+	\item \textbf{AWS \emph{SaaS} system(s)}
+	\item \textbf{Virtualization using Docker containers}
+	\item \textbf{Virtualization on AWS's EC2 VMs}
+	\item \textbf{Dedicated, non-virtualized machines}
+\end{itemize}
+
+These four systems will be deployed on to several different platforms.  Thus, we will now move on to describing the platforms that will be used to deploy these systems.
+\end{spacing}
+
+
+
+
+\subsection{Platforms}
+\begin{spacing}{1.5}
+We have chosen three different platforms on which to deploy the software packages, with the platforms spanning the range of cloud service paradigms from \emph{SaaS} to \emph{PaaS}\footnote{\textbf{PaaS :} Platform as a service.} to \emph{IaaS}\footnote{\textbf{IaaS :} Infrastructure as a service.}.  These platforms are 
+
+\begin{itemize}
+	\item \textbf{AWS's DynamoDB Service (}\emph{SaaS}\textbf{)}
+	\item \textbf{Containerized implementations (}using \emph{Docker}\textbf{)} running on
+	\begin{itemize}
+		\item \textbf{\emph{AWS's Container Service} (}\emph{PaaS}\textbf{)}
+		\item \textbf{\emph{AWS EC2 Machines running the docker run-time in Linux} (}hybrid \emph{Pass/IaaS}\textbf{)}
+	\end{itemize}
+	\item \textbf{AWS EC2 Machines running native installations of the software in Linux (}\emph{IaaS}\textbf{)}
+\end{itemize}
+\end{spacing}
+
+
+
+\section{Deployment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{flushleft}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\end{flushleft}
+\end{document}
