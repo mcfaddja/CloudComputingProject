@@ -2,44 +2,70 @@
 
 The software/systems chosen for comparison in this project are two different NoSQL database system.  These systems will be deployed/run/operated in several different ways.  These include \emph{SaaS}\footnote{\textbf{SaaS :} Software as a service.} implementations, \emph{containerized} implementations, and \emph{native installations}.  The goal of the project is to understand the performance characteristics of each deployment method \emph{\textbf{and}} to quantify the costs of each deployment method.  These costs will be calculated based on the hourly cost to operate, the initial time \& costs required for setup, and the maintenance requirement of a deployment.  Additionally, performance of the systems and deployments will be measured using the time required to carry out various database operations, under a set of several different conditions, as well as the CPU, memory, and network loads imposed by the various deployments under the same set of conditions.
 
-\section{The Body of The Paper}
-Typically, the body of a paper is organized into a hierarchical
-structure, with numbered or unnumbered headings for sections,
-subsections, sub-subsections, and even smaller sections.  The command
-\texttt{{\char'134}section} that precedes this paragraph is part of
-such a hierarchy.\footnote{This is a footnote.} \LaTeX\ handles the
-numbering and placement of these headings for you, when you use the
-appropriate heading commands around the titles of the headings.  If
-you want a sub-subsection or smaller part to be unnumbered in your
-output, simply append an asterisk to the command name.  Examples of
-both numbered and unnumbered headings will appear throughout the
-balance of this sample document.
 
-Because the entire article is contained in the \textbf{document}
-environment, you can indicate the start of a new paragraph with a
-blank line in your input file; that is why this sentence forms a
-separate paragraph.
 
-\subsection{Type Changes and {\itshape Special} Characters}
 
-We have already seen several typeface changes in this sample.  You can
-indicate italicized words or phrases in your text with the command
-\texttt{{\char'134}textit}; emboldening with the command
-\texttt{{\char'134}textbf} and typewriter-style (for instance, for
-computer code) with \texttt{{\char'134}texttt}.  But remember, you do
-not have to indicate typestyle changes when such changes are part of
-the \textit{structural} elements of your article; for instance, the
-heading of this subsection will be in a sans serif\footnote{Another
-  footnote here.  Let's make this a rather long one to see how it
-  looks.} typeface, but that is handled by the document class file.
-Take care with the use of\footnote{Another footnote.}  the
-curly braces in typeface changes; they mark the beginning and end of
-the text that is to be in the different typeface.
 
-You can use whatever symbols, accented characters, or non-English
-characters you need anywhere in your document; you can find a complete
-list of what is available in the \textit{\LaTeX\ User's Guide}
-\cite{Lamport:LaTeX}.
+
+\section{Systems and Platforms}
+We will be using two NoSQL database software packages.  The first software package is \textbf{DynamoDB} from Amazon Web Services (\emph{AWS}), while the second software package will be \textbf{Cassandra}, an open-source NoSQL database software package.  These software packages will be deployed using several different systems and platforms, as described below.
+
+
+
+\subsection{Systems}
+
+This project will run the software packages on four different systems (\emph{or types of systems}).  We have chosen systems which range from hosted \emph{SaaS} through various degrees of virtualization and then all the way to non-virtualized machines.  These systems are as follows
+
+\begin{spacing}{1.30}
+\begin{enumerate}
+	\item \textbf{AWS \emph{SaaS} system(s)}
+	\item \textbf{Virtualization using Docker containers}
+	\item \textbf{Virtualization on AWS's EC2 VMs}
+	\item \textbf{Dedicated, non-virtualized machines}
+\end{enumerate}
+\end{spacing}
+
+These four systems will be deployed using several different platforms which we will describe in the next part of this section.
+
+
+
+\subsection{Platforms}
+
+We have chosen three different platforms on which to deploy our systems.  The chosen platforms span the range of cloud service paradigms from \emph{SaaS} to \emph{PaaS}\footnote{\textbf{PaaS :} Platform as a service.} to \emph{IaaS}\footnote{\textbf{IaaS :} Infrastructure as a service.}.  We list the three platforms, along with two variations on one of the platforms, below
+
+\begin{spacing}{1.30}
+\begin{itemize}
+	\item \textbf{AWS's DynamoDB Service (}\emph{SaaS}\textbf{)}
+	\item \textbf{Containerized implementations (}using \emph{Docker}\textbf{) running on}
+	%\begin{spacing}{1.15}
+	\begin{itemize}
+		\item \textbf{\emph{AWS's Container Service} (}\emph{PaaS}\textbf{)}
+		\item \textbf{\emph{AWS EC2 Machines running the docker run-time in Linux} (}hybrid \emph{Pass/IaaS}\textbf{)}
+	\end{itemize}
+	\vspace{0.025in}
+	%\end{spacing}
+	\item \textbf{AWS EC2 Machines running native installations of the software in Linux (}\emph{IaaS}\textbf{)}
+\end{itemize}
+\end{spacing}
+
+In the next section, we list which systems will run each software package, along with a explanation why each software-system pairing was chosen.  Additionally, we will describe which platforms will be used to deploy each system and why those deployment choices were made.
+
+
+
+
+
+
+\section{Deployment}
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Math Equations}
 You may want to display math equations in three distinct styles:
