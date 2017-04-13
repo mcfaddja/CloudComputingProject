@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.11)  12 APR 2017 23:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.11)  13 APR 2017 05:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1203,11 +1203,11 @@ s not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
- 17753 strings out of 493013
- 269491 string characters out of 6133343
+ 17756 strings out of 493013
+ 269566 string characters out of 6133343
  372371 words of memory out of 5000000
  20523 multiletter control sequences out of 15000+600000
- 128940 words of font info for 365 fonts, out of 8000000 for 9000
+ 129213 words of font info for 367 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,11n,94p,1078b,681s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
@@ -1250,7 +1250,7 @@ fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr
 ve/2016/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/public/newtx/zxlri.pfb>
-Output written on "Requirements (LaTeX, ACM template).pdf" (4 pages, 619411 byt
+Output written on "Requirements (LaTeX, ACM template).pdf" (4 pages, 619942 byt
 es).
 PDF statistics:
  268 PDF objects out of 1000 (max. 8388607)
