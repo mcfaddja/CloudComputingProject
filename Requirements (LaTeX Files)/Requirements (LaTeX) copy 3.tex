@@ -1,7 +1,7 @@
 \documentclass{article}[12pt]
 \voffset = 0.35in
 \hoffset = -0.20in
-\setlength{\textheight}{8.75in}
+\setlength{\textheight}{8.5in}
 \setlength{\topmargin}{-0.0in}
 \setlength{\oddsidemargin}{-0.0in}
 \setlength{\evensidemargin}{0in}
@@ -31,9 +31,6 @@
 %\singlespacing
 
 % BEGIN PRE-AMBLE
-\usepackage{enumitem}
-
-
 \usepackage[hang,bottom,flushmargin]{footmisc}
 
 \usepackage[footnotesep=0.3in]{geometry}
@@ -153,13 +150,13 @@ $\phantom{1}$ \\
 \end{center}
 
 
-\vspace{1.2in}
+\vspace{0.9in}
 
 
 
 
-%\begin{multicols*}{2}
-\begin{flushleft}
+\begin{multicols*}{2}
+%\begin{flushleft}
 
 
 \section*{Abstract}
@@ -193,12 +190,12 @@ We will be using two NoSQL database software packages.  The first software packa
 \begin{spacing}{1.5}
 This project will run the software packages on four different systems (\emph{or types of systems}).  We have chosen systems which range from hosted \emph{SaaS} through various degrees of virtualization and then all the way to non-virtualized machines.  These systems are as follows
 
-\begin{enumerate}[label=\large{\textbf{\Alph*}):}]
+\begin{itemize}
 	\item \textbf{AWS \emph{SaaS} system(s)}
 	\item \textbf{Virtualization using Docker containers}
 	\item \textbf{Virtualization on AWS's EC2 VMs}
 	\item \textbf{Dedicated, non-virtualized machines}
-\end{enumerate}
+\end{itemize}
 
 These four systems will be deployed using several different platforms which we will describe in the next part of this section.
 \end{spacing}
@@ -210,19 +207,15 @@ These four systems will be deployed using several different platforms which we w
 \begin{spacing}{1.5}
 We have chosen three different platforms on which to deploy our systems.  The chosen platforms span the range of cloud service paradigms from \emph{SaaS} to \emph{PaaS}\footnote{\textbf{PaaS :} Platform as a service.} to \emph{IaaS}\footnote{\textbf{IaaS :} Infrastructure as a service.}.  We list the three platforms, along with two variations on one of the platforms, below
 
-\begin{enumerate}[label=\large{\textbf{\arabic*}):}]
+\begin{itemize}
 	\item \textbf{AWS's DynamoDB Service (}\emph{SaaS}\textbf{)}
 	\item \textbf{Containerized implementations (}using \emph{Docker}\textbf{) running on}
-
-	\begin{enumerate}[label=\large{\textbf{\roman*}):}]
-		\item AWS's Container Service (\emph{PaaS})
-		\item AWS EC2 Machines running the docker run-time in Linux (\emph{hybrid: Pass/IaaS})
-	\end{enumerate}
-	%\vspace{0.025in}
-	
+	\begin{itemize}
+		\item \textbf{\emph{AWS's Container Service} (}\emph{PaaS}\textbf{)}
+		\item \textbf{\emph{AWS EC2 Machines running the docker run-time in Linux} (}hybrid \emph{Pass/IaaS}\textbf{)}
+	\end{itemize}
 	\item \textbf{AWS EC2 Machines running native installations of the software in Linux (}\emph{IaaS}\textbf{)}
-	\item \textbf{A dedicated, non-virtualized server (}\emph{server}\textbf{)}
-\end{enumerate}
+\end{itemize}
 
 In the next section, we list which systems will run each software package, along with a explanation why each software-system pairing was chosen.  Additionally, we will describe which platforms will be used to deploy each system and why those deployment choices were made.
 \end{spacing}
@@ -231,10 +224,9 @@ In the next section, we list which systems will run each software package, along
 
 
 
-
 \section{Deployment}
 \begin{spacing}{1.5}
-The deployment strategy will be described in two parts which can be breifly described as "\emph{what systems will be used to run and/or implement each software package}" and "\emph{which platforms will be used to deploy each of these systems}".  In particular, this 
+We will 
 \end{spacing}
 
 
@@ -278,8 +270,8 @@ The deployment strategy will be described in two parts which can be breifly desc
 
 
 
-%%\end{flushleft}
-%\end{multicols*}
+%\end{flushleft}
+\end{multicols*}
 
 
 
@@ -324,5 +316,5 @@ The deployment strategy will be described in two parts which can be breifly desc
 
 
 
-\end{flushleft}
+%\end{flushleft}
 \end{document}
