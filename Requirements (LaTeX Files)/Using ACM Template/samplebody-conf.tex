@@ -18,14 +18,25 @@ This project will run the software packages on four different systems (\emph{or 
 
 \begin{spacing}{1.40}
 \begin{enumerate}[label=\Large{\textbf{\Alph*}):}]
-	\item \textbf{AWS \emph{SaaS} system(s)}
-	\item \textbf{Virtualization using Docker containers}
+	\item \textbf{\emph{SaaS}}
+	\item \textbf{Virtualization using \emph{Docker} containers}
 	\item \textbf{Virtualization on AWS's EC2 VMs}
 	\item \textbf{Dedicated, non-virtualized machines}
 \end{enumerate}
 \end{spacing}
 
-These four systems will be deployed using several different platforms which we will describe in the next part of this section.
+These four systems will be deployed using several different platforms which we will describe in the next part of this section; however, before proceeding to that, we will give a through description of each system listed above.
+
+
+\subsubsection{\underline{\emph{SaaS}} (code: \textbf{A}) }
+
+In this system paradigm, a particular software package is developed and maintained with the intent of being used by a provider as selling \emph{Software as a Service}. As far as system configuration on our end (\emph{the system-administrator/developer}), paradigm only requires that we select a platform provider and collected the database data so that it can eventually be prepared for deployment.
+
+
+\subsubsection{\underline{Virtualization using \emph{Docker} containers} (code: \textbf{B}) }
+
+For the purposes for this paper and the ensuing project, we will only use \textbf{containers} which are created using and for use in \emph{Docker}.  This choice was made because of \emph{Docker}'s ubiquity, wide availability, and the ease of access to cloud services designed for and solely dedicated to the deployment of \emph{Docker} containers.
+
 
 
 
@@ -35,12 +46,13 @@ We have chosen three different platforms on which to deploy our systems.  The ch
 
 \begin{spacing}{1.40}
 \begin{enumerate}[label=\Large{\textbf{\arabic*}):}]
-	\item \textbf{AWS's DynamoDB Service (}\emph{SaaS}\textbf{)}
+	%\item \textbf{AWS's DynamoDB Service (}\emph{SaaS}\textbf{)}
+	\item \textbf{AWS \emph{SaaS} system(s)}
 	\item \textbf{Containerized implementations (}using \emph{Docker}\textbf{) running on}
 
 	\begin{enumerate}[label=\Large{\textbf{\roman*}):}]
 		\item \textbf{\emph{AWS's Container Service} (}\emph{PaaS}\textbf{)}
-		\item \textbf{\emph{AWS EC2 Machines running the docker run-time in Linux} (}hybrid \emph{Pass/IaaS}\textbf{)}
+		\item \textbf{\emph{AWS EC2 Machines running the Docker run-time in Linux} (}hybrid \emph{Pass/IaaS}\textbf{)}
 	\end{enumerate}
 	\vspace{0.025in}
 	
@@ -58,7 +70,7 @@ In the next section, we list which systems will run each software package, along
 
 \section{Deployment}
 
-The deployment strategy will be described in two parts which can be briefly described as "\emph{what systems will be used to run and/or implement each software package}" and "\emph{which platforms will be used to deploy each of these systems}".  Specifically, the first part of the description for our deployment strategy details which systems will be used to run each software package (\emph{DynamoDB \underline{or} Cassandra}), along with how the each system will implement and run the software.  This will be complemented by the second part which will detail what platforms 
+The deployment strategy will be described in two parts which can be briefly described as "\emph{what systems will be used to run and/or implement each software package}" and "\emph{which platforms will be used to deploy each of these systems}".  Specifically, the first part of the description for our deployment strategy details which systems will be used to run each software package (\emph{DynamoDB \underline{or} Cassandra}), along with how the each system will implement and run the software.  This will be complemented by the second part of the description, which will detail what platforms will be used for deploying each of the systems, along with why each platform was chosen to deploy are particular software/system combination.  
 
 
 
