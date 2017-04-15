@@ -325,22 +325,47 @@ Finally, we have the previously mentioned table. \newline
 \end{spacing}
 \end{flushleft} 
 \begin{center}
-	\vspace{-0.60in}
+	%\vspace{-0.60in}
+	\vspace{-0.20in}
 	\begin{spacing}{1.5}
 	\begin{tabular}{c || c | c}
-		\textbf{Cloud Paradigm} & \textbf{\underline{DynamoDB}} & \textbf{\underline{Cassandra}} \\
+		\textbf{Cloud} & \textbf{\underline{DynamoDB}} & \textbf{\underline{Cassandra}} \\
+		\textbf{Paradigm} & & \\
 		\hline
 		\hline
-		\textbf{\emph{SaaS}} & AWS's DynamoDB SaaS Cloud Service &  \\
+		 & & \\
+		\textbf{\emph{SaaS}} & AWS's DynamoDB &  \\
+		 & SaaS Cloud Service & \\
 		\hline
-		\textbf{\emph{PaaS}} & \emph{Docker} container on AWS's & \emph{Docker} container on AWS's \\
-		 & Container Service & Container Service \\
+		 & & \\
+		\textbf{\emph{PaaS}} & \emph{Docker} container on & \emph{Docker} container on \\
+		 & AWS's Container Service & AWS's Container Service \\
 		\hline
-		\textbf{\emph{hybrid-PaaS/IaaS}} & A \emph{Docker} container on & A \emph{Docker} container on an AWS EC2 VM on \\
+		 & & \\
+		\textbf{\emph{hybrid-PaaS/IaaS}} & A \emph{Docker} container on & A \emph{Docker} container on \\
 		 & an AWS EC2 VM instance & an AWS EC2 VM instance \\ 
 		\hline
+		 & & \\
 		\textbf{\emph{IaaS}} &  & Native installation in Linux on \\
 		 &  & an AWS EC2 VM instance
+	\end{tabular}
+	
+	or 
+	
+	
+	\begin{tabular}{| c || c | c |}
+		\hline
+		$\begin{array}{c} \text{\textbf{\emph{Cloud}}} \\ \text{\textbf{\emph{Paradigm}}} \\\end{array}$ & \begin{tabular}{c} $\phantom{1}$ \\ \textbf{\underline{DynamoDB}} \\ $\phantom{1}$ \end{tabular} & \textbf{\underline{Cassandra}} \\
+		\hline
+		\hline
+		\begin{tabular}{c} $\phantom{1}$ \\ \textbf{\emph{SaaS}} \\ $\phantom{1}$ \end{tabular} & $\begin{array}{c} \text{AWS's DynamoDB} \\ \text{SaaS Cloud Service} \end{array}$ &  \\
+		\hline
+		\begin{tabular}{c}  $\phantom{1}$ \\ \textbf{\emph{PaaS}} \\ $\phantom{1}$ \end{tabular} & $\begin{array}{c} \text{\emph{Docker} container on} \\ \text{AWS's Container Service} \end{array}$ & $\begin{array}{c} \text{\emph{Docker} container on} \\ \text{AWS's Container Service} \end{array}$ \\
+		\hline
+		\begin{tabular}{c}  $\phantom{1}$ \\ \textbf{\emph{hybrid-PaaS/IaaS}} \\ $\phantom{1}$ \end{tabular} & $\begin{array}{c} \text{A \emph{Docker} container on} \\ \text{an AWS EC2 VM instance} \end{array}$ & $\begin{array}{c} \text{A \emph{Docker} container on} \\ \text{an AWS EC2 VM instance} \end{array}$ \\
+		\hline
+		\begin{tabular}{c}  $\phantom{1}$ \\ \textbf{\emph{IaaS}} \\ $\phantom{1}$ \end{tabular} &  & $\begin{array}{c} \text{Native installation in Linux on} \\ \text{an AWS EC2 VM instance} \end{array}$ \\
+		\hline
 	\end{tabular}
 	\end{spacing}
 \end{center}
