@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  15 APR 2017 01:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  15 APR 2017 01:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -619,11 +619,11 @@ Package Fancyhdr Warning: \headheight is too small (15.0pt):
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6022 strings out of 493014
- 86015 string characters out of 6133351
+ 6028 strings out of 493014
+ 86097 string characters out of 6133351
  184346 words of memory out of 5000000
- 9442 multiletter control sequences out of 15000+600000
- 22696 words of font info for 87 fonts, out of 8000000 for 9000
+ 9448 multiletter control sequences out of 15000+600000
+ 24108 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,17n,43p,2792b,3380s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
@@ -642,7 +642,7 @@ sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on "Requirements (LaTeX).pdf" (10 pages, 205914 bytes).
+Output written on "Requirements (LaTeX).pdf" (10 pages, 207546 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream

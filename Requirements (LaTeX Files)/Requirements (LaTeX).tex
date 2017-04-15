@@ -327,7 +327,7 @@ Finally, we have the previously mentioned table. \newline
 \begin{center}
 	%\vspace{-0.60in}
 	\vspace{-0.25in}
-	\begin{spacing}{1.5}
+	%\begin{spacing}{1.35}
 	\begin{tabular}{| c || c | c |}
 		\hline
 		$\begin{array}{c} \text{\textbf{\emph{Cloud}}} \\ \text{\textbf{\emph{Paradigm}}} \\\end{array}$ & \begin{tabular}{c} $\phantom{1}$ \\ \textbf{\underline{DynamoDB}} \\ $\phantom{1}$ \end{tabular} & \textbf{\underline{Cassandra}} \\
@@ -342,16 +342,22 @@ Finally, we have the previously mentioned table. \newline
 		\begin{tabular}{c}  $\phantom{1}$ \\ \textbf{\emph{IaaS}} \\ $\phantom{1}$ \end{tabular} &  & $\begin{array}{c} \text{Native installation in Linux on} \\ \text{an AWS EC2 VM instance} \end{array}$ \\
 		\hline
 	\end{tabular}
-	\end{spacing}
+	%\end{spacing}
+\end{center}
+%\vspace{0.1in}
+\begin{center}
+	\large{\textbf{\underline{Table 3-1}}: \emph{Table summarizing the deployment strategy}.}
 \end{center}
 \begin{flushleft}
-	
+
+
+\vspace{0.25in}	
 	
 
 \section{Metrics}
 
 \begin{spacing}{1.5}
-We will evaluate each of the software/system/platform combinations based on three metrics.  The first two of these metrics are based on performance data which will use data collected during the operation of each of these combinations.  Each element of performance data will be collected based on carrying out a specific database operation, while the system is under a given load condition.  We will use several different types of database operations (\emph{i.e. insert, update, etc.}) when running these tests.  Additionally, each database operation will be run in several different ways, with each having a different level of complexity.  Finally, the third and last metric will be based on the cost to setup, run, and maintain the software, system, and platform used to create and deploy a given combination.
+We will evaluate each of the software/system/platform combinations based on three metrics.  The first two of these metrics are based on performance data which will use data collected during the operation of each of these combinations.  Each element of performance data will be collected based on carrying out a specific database operation, while the system is under a given load condition.  We will use several different types of database operations (\emph{i.e. insert, update, etc.}) when running these tests.  Additionally, each database operation will be run in several different ways, with each having a different level of complexity.  Finally, the third and last metric will be based on the cost to setup, run, and maintain the software, system, and platform used to create and deploy a given combination.  
 \end{spacing}
 
 
