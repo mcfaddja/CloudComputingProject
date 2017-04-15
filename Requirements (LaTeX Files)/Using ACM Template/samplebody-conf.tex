@@ -57,7 +57,7 @@ We have chosen four different platforms on which to deploy our systems.  The cho
 \begin{enumerate}[label=\Large{\textbf{\arabic*}):}]
 	\item \textbf{(An) AWS Software Service (}\emph{SaaS}\textbf{)}
 	%\item \textbf{AWS \emph{SaaS} system(s)}
-	\item \textbf{Containerized implementations (}using \emph{Docker}\textbf{) running on}
+	\item \textbf{Containers (}using \emph{Docker}\textbf{) running on}
 
 	\begin{enumerate}[label=\Large{\textbf{\roman*}):}]
 		\item \textbf{\emph{AWS's Container Service} (}\emph{PaaS}\textbf{)}
@@ -71,7 +71,29 @@ We have chosen four different platforms on which to deploy our systems.  The cho
 \end{spacing}
 
 
-In the next section, we list which systems will run each software package, along with a explanation why each software-system pairing was chosen.  Additionally, we will describe which platforms will be used to deploy each system and why those deployment choices were made.  
+In the next section, we list which systems will run each software package, along with a explanation why each software-system pairing was chosen.  Additionally, we will describe which platforms will be used to deploy each system and why those deployment choices were made.  Before proceeding to that, and as with our list of system, we will describe each platform thoroughly.
+
+
+\subsubsection{\underline{AWS Software Service} (code: \textbf{1})}
+
+Our first platform we will use for the deployment of some systems is AWS's Software Service platform which provides various software packages which run as a service.  This means that Administrator do not have to configure and secure a server and OS on which to run the software, nor do they have to install and manage the running of the software on said server.  Instead, all a System Administrator must do is create an instance of the desired Software Service, with the configuration required for the application at hand.  Once the instance has been created, it is loaded with any information required and/or data to be used, after which it is immediately available for use by users and other clients. 
+
+
+\subsubsection{\underline{Containers} (code: \textbf{2\_})}\footnote{In the code \textbf{2\_}, we use the "\_" after the 2 is a place-holder for an additional code-letter.  This is due to the fact that there are two different versions of this platform being used.}
+
+The next platform we have chosen involves the deployment of the previously described \emph{Docker} containers.  We will use two different platforms that implement the \emph{Docker} engine which is actually responsible for running the containers.  These "\emph{Docker} Platforms" are
+
+\begin{itemize}
+	\item $\bigl[$\emph{\underline{AWS's Container Service} (code:} \textbf{2i}\emph{)}$\bigr]$
+\end{itemize}
+
+
+
+
+
+
+
+%%%%%%%
 
 
 
