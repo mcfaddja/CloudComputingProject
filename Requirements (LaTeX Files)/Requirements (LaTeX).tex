@@ -289,7 +289,7 @@ Two different NoSQL database software  packages will be implemented in and/or  i
 
 \subsubsection{\underline{A dedicated, non-virtualized server} (code: \textbf{4})}
 \begin{spacing}{1.5}
-	The last deployment platform we have chosen is a dedicated, non-virtualized server.  These servers will run Linux as their OS and will be dedicated to running and serving the software to be tested.
+	The last deployment platform we have chosen is a dedicated, non-virtualized server.  These servers will natively run Linux as their OS and will be dedicated to running and serving the software to be tested and will be setup in a manner similar to that used for the AWS EC2 instances described in \textbf{\underline{3}}.  In fact the only differences between the setup process for these physical machines and the setup of the EC2 VMs are the elimination of the need to create and configure an EC2 VM instance and the added requirement to communicate with the administrator of the network on which the machines are to be deployed.  This second difference in the setup process arises because we do not have the same control over the network connections for these physical machines as we do with AWS VMs.
 \end{spacing}
 
 
