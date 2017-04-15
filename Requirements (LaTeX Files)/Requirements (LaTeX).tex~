@@ -1,0 +1,328 @@
+\documentclass{article}[12pt]
+\voffset = 0.35in
+\hoffset = -0.20in
+\setlength{\textheight}{8.75in}
+\setlength{\topmargin}{-0.0in}
+\setlength{\oddsidemargin}{-0.0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.25in}
+\usepackage{amsfonts, amsmath, amsthm, amssymb,mathrsfs}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{layout}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage[]{algorithm2e}
+\usepackage{algorithmicx}
+\usepackage{multicol}
+\pagestyle{fancy}
+\lhead{TCSS 562 - Sp. '17}
+\chead{\textbf{Comparison of NoSQL on the Cloud \\ Software, Systems and Platforms}}
+\rhead{Term Project}
+\headsep = 25pt 
+\headheight = 15pt
+%\setlength{\footskip}{-15pt}
+%\marginparsep = 0in
+%\marginparwidth = 0in
+
+
+%\doublespacing
+%\singlespacing
+
+% BEGIN PRE-AMBLE
+\usepackage{enumitem}
+
+
+\usepackage[hang,bottom,flushmargin]{footmisc}
+
+\usepackage[footnotesep=0.3in]{geometry}
+
+%\usepackage[T1]{fontenc}
+
+%\usepackage[flushmargin]{footmisc}
+
+\addtolength{\footnotesep}{-0.1in} % change to 1mm
+
+\renewcommand{\thefootnote}{\textbf{\arabic{footnote}}}
+
+
+
+
+% Setup equation numbering 
+\numberwithin{equation}{section} 
+
+%Equation Numbering Shortcut Commands
+\newcommand{\numbch}[1]{\setcounter{section}{#1} \setcounter{equation}{0}}
+\newcommand{\numbpr}[1]{\setcounter{subsection}{#1} \setcounter{equation}{0}}
+\newcommand{\note}{\textbf{NOTE:  }}
+
+%Formatting shortcut commands
+\newcommand{\chap}[1]{\begin{center}\begin{Large}\textbf{\underline{#1}}\end{Large}\end{center}}
+\newcommand{\prob}[1]{\textbf{\underline{Problem #1):}}}
+\newcommand{\sol}[1]{\textbf{\underline{Solution #1):}}}
+\newcommand{\MMA}{\emph{Mathematica }}
+
+%Text Shortcut Command
+\newcommand{\s}[1]{\emph{Side #1}}
+
+% Math shortcut commands
+\newcommand{\dd}[2]{\frac{d #1}{d #2}}
+\newcommand{\ddn}[3]{\frac{d^{#1} #2}{d #3^{#1}}}
+%\newcommand{\dd}[2]{\frac{\textrm{d} #1}{\textrm{d} #2}}
+%\newcommand{\ddn}[3]{\frac{\textrm{d}^{#1} #2}{\textrm{d} #3^{#1}}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdn}[3]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+\newcommand{\infint}{\int_{-\infty}^\infty}
+\newcommand{\infiint}{\iint_{-\infty}^\infty}
+\newcommand{\infiiint}{\iiint_{-\infty}^\infty}
+\newcommand{\dint}[2]{\int_{#1}^{#2}}
+\newcommand{\intdd}[1]{\textrm{d}#1}
+\newcommand{\intddd}[1]{\textrm{d}#1}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+%\newcommand{\mat}[1]{\overleftrightarrow{\mathbf{#1}}}
+%\newcommand{\mat}[1]{\bar{\bar{\mathbf{#1}}}}
+\newcommand{\mat}[1]{\overline{\overline{\mathbf{#1}}}}
+
+%Math Text
+\newcommand{\rect}{\text{ rect}}
+\newcommand{\csch}{\text{ csch}}
+
+%Physics Shortcut Commands
+\newcommand{\h}{\mathcal{H}}
+
+
+%MRI Stuff Shortcut Commands
+\newcommand{\tno}{t_{n}}
+\newcommand{\tn}[1]{t_{n#1}}
+\newcommand{\Mno}{\vec{M}^{\left( n \right)}}
+\newcommand{\Mn}[1]{\vec{M}^{\left( n #1 \right)}}
+\newcommand{\Mnto}[1]{\vec{M}^{(n)} \left( t_{n} #1 \right)}
+\newcommand{\Mnt}[2]{\vec{M}^{(n #1)} \left( t_{n #1} #2 \right)}
+\newcommand{\rot}[2]{\mat{R}_{#1} \left( #2 \right)}
+\newcommand{\DnMat}[2]{\mat{D} \left( t_{n #1} #2 \right)}
+\newcommand{\rotINV}[2]{\mat{R}^{-1}_{#1} \left( #2 \right)}
+\newcommand{\DnMatINV}[2]{\mat{D}^{-1} \left( t_{n #1} #2 \right)}
+\newcommand{\betaNt}[2]{\beta \left( t_{n #1} #2 \right)}
+\newcommand{\TR}{\textrm{TR}}
+
+
+% Math formatting commands
+\newcommand{\stack}[2]{\stackrel{\mathclap{\normalfont\mbox{#1}}}{#2}}
+
+
+% END PRE-AMBLE
+%\renewcommand{\baselinestretch}{1.0} 
+\setlength{\columnsep}{0.20in}
+
+\begin{document}
+\thispagestyle{empty}
+
+$\phantom{1}$ \\
+\vspace{0.2in}
+\begin{center}
+	\Huge{\textbf{\underline{Comparison of NoSQL on the Cloud}}} \\
+	\vspace{0.10in}
+	\Huge{\textbf{\underline{Software, Systems and Platforms}}} \\
+	\vspace{0.20in}
+	\begin{multicols}{3}
+		\Large{\textbf{J. McFadden}} \\
+		\vspace{0.1in} 
+		\normalsize{Univ. of Washington: Tacoma} \\ \small{Tacoma, WA} \\ 
+		\vspace{0.05in}
+		\large{\emph{mcfaddja@uw.edu}}  \\
+		
+		\Large{\textbf{Y. Tamta}} \\ 
+		\vspace{0.1in} 
+		\normalsize{Univ. of Washington: Tacoma} \\ \small{Tacoma, WA} \\ 
+		\vspace{0.05in} 
+		\large{\emph{yashaswitamta@gmail.com}} \\
+		
+        		\Large{\textbf{J. N. Gandhi}} \\
+		\vspace{0.1in} 
+		\normalsize{Univ. of Washington: Tacoma} \\ \small{Tacoma, WA} \\ 
+		\vspace{0.05in} 
+		\large{\emph{jugalg@uw.edu}}
+	\end{multicols}
+	\vspace{0.3in}
+	\Large{\textbf{\underline{April 11, 2017}}} \\
+	\vspace{0.1in}
+	\small{\emph{Project coordinator indicated by \textbf{*}}}
+\end{center}
+
+
+\vspace{1.2in}
+
+
+
+
+%\begin{multicols*}{2}
+\begin{flushleft}
+
+
+\section*{Abstract}
+\begin{spacing}{1.5}
+Two different NoSQL database software  packages will be implemented in and/or  installed on several different types of  systems. In turn, these systems will  be deployed on several different  platforms. This will allow different  combinations of software, systems,  and platforms to be compared based  on both performance, difficulty of setup  \& maintenance, and both setup \& operating costs.
+\end{spacing}
+
+
+
+
+
+
+\section{Introduction}
+\begin{spacing}{1.5}
+The software/systems chosen for comparison in this project are two different NoSQL database system.  These systems will be deployed/run/operated in several different ways.  These include \emph{SaaS}\footnote{\textbf{SaaS :} Software as a service.} implementations, \emph{containerized} implementations, and \emph{native installations}.  The goal of the project is to understand the performance characteristics of each deployment method \emph{\textbf{and}} to quantify the costs of each deployment method.  These costs will be calculated based on the hourly cost to operate, the initial time \& costs required for setup, and the maintenance requirement of a deployment.  Additionally, performance of the systems and deployments will be measured using the time required to carry out various database operations, under a set of several different conditions, as well as the CPU, memory, and network loads imposed by the various deployments under the same set of conditions.
+\end{spacing}
+
+
+
+
+
+
+\section{Systems and Platforms}
+\begin{spacing}{1.5}
+We will be using two NoSQL database software packages.  The first software package is \textbf{DynamoDB} from Amazon Web Services (\emph{AWS}), while the second software package will be \textbf{Cassandra}, an open-source NoSQL database software package.  These software packages will be deployed using several different systems and platforms, as described below.
+\end{spacing}
+
+
+
+\subsection{Systems}
+\begin{spacing}{1.5}
+This project will run the software packages on four different systems (\emph{or types of systems}).  We have chosen systems which range from hosted \emph{SaaS} through various degrees of virtualization and then all the way to non-virtualized machines.  These systems are as follows
+
+\begin{enumerate}[label=\large{\textbf{\Alph*}):}]
+	\item \textbf{AWS \emph{SaaS} system(s)}
+	\item \textbf{Virtualization using Docker containers}
+	\item \textbf{Virtualization on AWS's EC2 VMs}
+	\item \textbf{Dedicated, non-virtualized machines}
+\end{enumerate}
+
+These four systems will be deployed using several different platforms which we will describe in the next part of this section.
+\end{spacing}
+
+
+
+
+\subsection{Platforms}
+\begin{spacing}{1.5}
+We have chosen three different platforms on which to deploy our systems.  The chosen platforms span the range of cloud service paradigms from \emph{SaaS} to \emph{PaaS}\footnote{\textbf{PaaS :} Platform as a service.} to \emph{IaaS}\footnote{\textbf{IaaS :} Infrastructure as a service.}.  We list the three platforms, along with two variations on one of the platforms, below
+
+\begin{enumerate}[label=\large{\textbf{\arabic*}):}]
+	\item \textbf{AWS's DynamoDB Service (}\emph{SaaS}\textbf{)}
+	\item \textbf{Containerized implementations (}using \emph{Docker}\textbf{) running on}
+
+	\begin{enumerate}[label=\large{\textbf{\roman*}):}]
+		\item AWS's Container Service (\emph{PaaS})
+		\item AWS EC2 Machines running the docker run-time in Linux (\emph{hybrid: Pass/IaaS})
+	\end{enumerate}
+	%\vspace{0.025in}
+	
+	\item \textbf{AWS EC2 Machines running native installations of the software in Linux (}\emph{IaaS}\textbf{)}
+	\item \textbf{A dedicated, non-virtualized server (}\emph{server}\textbf{)}
+\end{enumerate}
+
+In the next section, we list which systems will run each software package, along with a explanation why each software-system pairing was chosen.  Additionally, we will describe which platforms will be used to deploy each system and why those deployment choices were made.
+\end{spacing}
+
+
+
+
+
+
+\section{Deployment}
+\begin{spacing}{1.5}
+The deployment strategy will be described in two parts which can be breifly described as "\emph{what systems will be used to run and/or implement each software package}" and "\emph{which platforms will be used to deploy each of these systems}".  In particular, this 
+\end{spacing}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%\end{flushleft}
+%\end{multicols*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{flushleft}
+\end{document}

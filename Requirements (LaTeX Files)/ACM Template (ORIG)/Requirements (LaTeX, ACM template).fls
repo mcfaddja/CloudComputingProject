@@ -1,0 +1,7 @@
+PWD /home/jamster/GitHub/CloudComputingProject/Requirements (LaTeX Files)/Using ACM Template
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT Requirements (LaTeX, ACM template).tex
+OUTPUT Requirements (LaTeX, ACM template).log
