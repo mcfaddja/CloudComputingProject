@@ -621,7 +621,7 @@ Package Fancyhdr Warning: \headheight is too small (15.0pt):
 Here is how much of TeX's memory you used:
  6022 strings out of 493014
  86015 string characters out of 6133351
- 186346 words of memory out of 5000000
+ 184346 words of memory out of 5000000
  9442 multiletter control sequences out of 15000+600000
  22696 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -642,7 +642,7 @@ sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on "Requirements (LaTeX).pdf" (10 pages, 206656 bytes).
+Output written on "Requirements (LaTeX).pdf" (10 pages, 205914 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
