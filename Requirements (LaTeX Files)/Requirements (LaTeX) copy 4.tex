@@ -304,14 +304,20 @@ Two different NoSQL database software  packages will be implemented in and/or  i
 
 \section{Deployment}
 \begin{spacing}{1.5}
-The deployment strategy was developed with the goal of maximizing our ability to compare combinations of software, systems, and platforms.  Maximizing our choices for comparison was important because it allowed us to choose combinations which could be effectively measured and where our findings would have "real-world" applications and meaning.  We have structured the description of our deployment strategy using the software package being tested as the over-arching descriptor of they deployments (\emph{i.e. breaking all deployment down along the lines of which software package is a particular deployment testing}).  This allows us to simplify the entire deployment strategy into a single table for easy viewing. We begin by describing the systems on which we have decided to run \emph{DynamoDB}, which are as follows:
+	The deployment strategy was developed with the goal of maximizing our ability to compare combinations of software, systems, and platforms.  Maximizing our choices for comparison was important because it allowed us to choose combinations which could be effectively measured and where our findings would have "real-world" applications and meaning.  We will describe this deployment strategy in two parts which can be briefly described as "\emph{what systems will be used to run and/or implement each software package}" and "\emph{which platforms will be used to deploy each of these systems}".  In particular, describing our deployment strategy in this was will allow the entire deployment strategy to be easily and succinctly described using just two tables.  Additionally, we have structured the description of our deployment strategy using the software package being tested as the over-arching descriptor of they deployments (\emph{i.e. breaking all deployment down along the lines of which software package is a particular deployment testing}).
+\end{spacing}
+
+
+
+\subsection{Software/System Combinations}
+\begin{spacing}{1.5}
+We begin by describing the systems on which we have decided to run \emph{DynamoDB}, which are as follows:
 
 \begin{itemize}
 	\item \textbf{\underline{AWS's DynamoDB Service}:} a \emph{SaaS} approach using AWS's DynamoDB SaaS Cloud Service.
 	\item \textbf{\underline{A \emph{Docker} container on AWS's Container Service}:} a \emph{PaaS} approach using AWS's Container Cloud Service.
 	\item \textbf{\underline{A \emph{Docker} container on an AWS EC2 VM}:} a \emph{hybrid-Pass/IaaS} approach using AWS's EC2 VM Cloud Service.
 \end{itemize}
-
 
 Continuing, we now describe the systems on which we have decided to run \emph{Cassandra}.  These systems are:
 
@@ -321,38 +327,11 @@ Continuing, we now describe the systems on which we have decided to run \emph{Ca
 	\item \textbf{\underline{A native installation in Linux on an AWS EC2 VM}:} an \emph{IaaS} approach using AWS's EC2 VM Cloud Service.
 \end{itemize}
 
-Finally, we have the previously mentioned table. \newline
-\end{spacing}
-\end{flushleft} 
-\begin{center}
-	\vspace{-0.60in}
-	\begin{spacing}{1.5}
-	\begin{tabular}{c || c | c}
-		\textbf{Cloud Paradigm} & \textbf{\underline{DynamoDB}} & \textbf{\underline{Cassandra}} \\
-		\hline
-		\hline
-		\textbf{\emph{SaaS}} & AWS's DynamoDB SaaS Cloud Service &  \\
-		\hline
-		\textbf{\emph{PaaS}} & \emph{Docker} container on AWS's & \emph{Docker} container on AWS's \\
-		 & Container Service & Container Service \\
-		\hline
-		\textbf{\emph{hybrid-PaaS/IaaS}} & A \emph{Docker} container on & A \emph{Docker} container on an AWS EC2 VM on \\
-		 & an AWS EC2 VM instance & an AWS EC2 VM instance \\ 
-		\hline
-		\textbf{\emph{IaaS}} &  & Native installation in Linux on \\
-		 &  & an AWS EC2 VM instance
-	\end{tabular}
-	\end{spacing}
-\end{center}
-\begin{flushleft}
-	
-	
 
-\section{Metrics}
 
-\begin{spacing}{1.5}
-We will evaluate each of the software/system/platform combinations based on three metrics.  The first two of these metrics are based on performance data which will use data collected during the operation of each of these combinations.  Each element of performance data will be collected based on carrying out a specific database operation, while the system is under a given load condition.  We will use several different types of database operations (\emph{i.e. insert, update, etc.}) when running these tests.  Additionally, each database operation will be run in several different ways, with each having a different level of complexity.  Finally, the third and last metric will be based on the cost to setup, run, and maintain the software, system, and platform used to create and deploy a given combination.
 \end{spacing}
+
+
 
 
 
