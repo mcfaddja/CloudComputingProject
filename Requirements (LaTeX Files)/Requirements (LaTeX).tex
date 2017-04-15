@@ -247,7 +247,7 @@ Two different NoSQL database software  packages will be implemented in and/or  i
 		
 		\begin{enumerate}[label=\large{\textbf{\roman*}):}]
 			\item \textbf{\emph{AWS's Container Service} (}\emph{PaaS}\textbf{)}
-			\item \textbf{\emph{AWS EC2 VM with Docker run-time} (}hybrid \emph{Pass/IaaS}\textbf{)}
+			\item \textbf{\emph{AWS EC2 VM with Docker run-time} (}\emph{hybrid-Pass/IaaS}\textbf{)}
 		\end{enumerate}
 		\vspace{0.025in}
 		
@@ -302,21 +302,34 @@ Two different NoSQL database software  packages will be implemented in and/or  i
 
 
 
-
-
-
-
-
-
-\newpage
-
-
-
 \section{Deployment}
 \begin{spacing}{1.5}
-	The deployment strategy will be described in two parts which can be breifly described as "\emph{what systems will be used to run and/or implement each software package}" and "\emph{which platforms will be used to deploy each of these systems}".  In particular, this 
+	The deployment strategy was developed with the goal of maximizing our ability to compare combinations of software, systems, and platforms.  Maximizing our choices for comparison was important because it allowed us to choose combinations which could be effectively measured and where our findings would have "real-world" applications and meaning.  We will describe this deployment strategy in two parts which can be briefly described as "\emph{what systems will be used to run and/or implement each software package}" and "\emph{which platforms will be used to deploy each of these systems}".  In particular, describing our deployment strategy in this was will allow the entire deployment strategy to be easily and succinctly described using just two tables.  Additionally, we have structured the description of our deployment strategy using the software package being tested as the over-arching descriptor of they deployments (\emph{i.e. breaking all deployment down along the lines of which software package is a particular deployment testing}).
 \end{spacing}
 
+
+
+\subsection{Software/System Combinations}
+\begin{spacing}{1.5}
+We begin by describing the systems on which we have decided to run \emph{DynamoDB}, which are as follows:
+
+\begin{itemize}
+	\item \textbf{\underline{AWS's DynamoDB Service}:} a \emph{SaaS} approach using AWS's DynamoDB SaaS Cloud Service.
+	\item \textbf{\underline{A \emph{Docker} container on AWS's Container Service}:} a \emph{PaaS} approach using AWS's Container Cloud Service.
+	\item \textbf{\underline{A \emph{Docker} container on an AWS EC2 VM}:} a \emph{hybrid-Pass/IaaS} approach using AWS's EC2 VM Cloud Service.
+\end{itemize}
+
+Continuing, we now describe the systems on which we have decided to run \emph{Cassandra}.  These systems are:
+
+\begin{itemize}
+	\item \textbf{\underline{A \emph{Docker} container on AWS's Container Service}:} a \emph{PaaS} approach using AWS's Container Cloud Service.
+	\item \textbf{\underline{A \emph{Docker} container on an AWS EC2 VM}:} a \emph{hybrid-Pass/IaaS} approach using AWS's EC2 VM Cloud Service.
+	\item \textbf{\underline{A native installation in Linux on an AWS EC2 VM}:} an \emph{IaaS} approach using AWS's EC2 VM Cloud Service.
+\end{itemize}
+
+
+
+\end{spacing}
 
 
 
