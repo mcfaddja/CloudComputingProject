@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.11)  14 APR 2017 15:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.11)  14 APR 2017 17:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1026,80 +1026,82 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/it' will be
 (Font)              scaled to size 9.0pt on input line 3.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 21.
+(Font)              scaled to size 10.95pt on input line 24.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 33.
+(Font)              scaled to size 9.0pt on input line 35.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 33.
+(Font)              scaled to size 9.0pt on input line 35.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/bx/it' in size <9> not a
 vailable
 (Font)              Font shape `OT1/LinuxBiolinumT-TLF/b/it' tried instead on i
-nput line 33.
+nput line 35.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/b/it' will be
-(Font)              scaled to size 9.0pt on input line 33.
+(Font)              scaled to size 9.0pt on input line 35.
  [1.1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
+Underfull \vbox (badness 1342) has occurred while \output is active []
+
+ [2.2]
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 157.
-LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 158.
+(Font)              scaled to size 9.0pt on input line 170.
+LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 171.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2016/12/29 TS1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 158.
+(Font)              scaled to size 9.0pt on input line 171.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `zi4' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-Package natbib Warning: Citation `Lamport:LaTeX' on page 2 undefined on input l
-ine 161.
+Package natbib Warning: Citation `Lamport:LaTeX' on page 3 undefined on input l
+ine 174.
 
 
-Package natbib Warning: Citation `bowman:reasoning' on page 2 undefined on inpu
-t line 197.
+Package natbib Warning: Citation `bowman:reasoning' on page 3 undefined on inpu
+t line 210.
 
 
-Package natbib Warning: Citation `clark:pct' on page 2 undefined on input line 
-197.
+Package natbib Warning: Citation `clark:pct' on page 3 undefined on input line 
+210.
 
 
-Package natbib Warning: Citation `braams:babel' on page 2 undefined on input li
-ne 197.
+Package natbib Warning: Citation `braams:babel' on page 3 undefined on input li
+ne 210.
 
 
-Package natbib Warning: Citation `herlihy:methodology' on page 2 undefined on i
-nput line 197.
+Package natbib Warning: Citation `herlihy:methodology' on page 3 undefined on i
+nput line 210.
 
 
-Package natbib Warning: Citation `clark:pct' on page 2 undefined on input line 
-198.
+Package natbib Warning: Citation `clark:pct' on page 3 undefined on input line 
+211.
 
 
-Package natbib Warning: Citation `Lamport:LaTeX' on page 2 undefined on input l
-ine 199.
+Package natbib Warning: Citation `Lamport:LaTeX' on page 3 undefined on input l
+ine 212.
 
 
-Package natbib Warning: Citation `salas:calculus' on page 2 undefined on input 
-line 199.
+Package natbib Warning: Citation `salas:calculus' on page 3 undefined on input 
+line 212.
 
 
-Package natbib Warning: Citation `Lamport:LaTeX' on page 2 undefined on input l
-ine 205.
+Package natbib Warning: Citation `Lamport:LaTeX' on page 3 undefined on input l
+ine 218.
 
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.3pt on input line 216.
+(Font)              scaled to size 7.3pt on input line 229.
 
-Package natbib Warning: Citation `Lamport:LaTeX' on page 2 undefined on input l
-ine 216.
+Package natbib Warning: Citation `Lamport:LaTeX' on page 3 undefined on input l
+ine 229.
 
-[2.2]
 
-Package natbib Warning: Citation `Fear05' on page 3 undefined on input line 280
+Package natbib Warning: Citation `Fear05' on page 3 undefined on input line 293
 .
 
 Package epstopdf Info: Source file: <fly.eps>
@@ -1110,13 +1112,13 @@ Package epstopdf Info: Source file: <fly.eps>
 (epstopdf)                    size: 4243 bytes
 (epstopdf)             Command: <repstopdf --outfile=fly-eps-converted-to.pdf f
 ly.eps>
-(epstopdf)             \includegraphics on input line 304.
+(epstopdf)             \includegraphics on input line 317.
 Package epstopdf Info: Output file is already uptodate.
-<fly-eps-converted-to.pdf, id=135, 34.1275pt x 32.12pt>
+<fly-eps-converted-to.pdf, id=125, 34.1275pt x 32.12pt>
 File: fly-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fly-eps-converted-to.pdf>
-Package pdftex.def Info: fly-eps-converted-to.pdf used on input line 304.
+Package pdftex.def Info: fly-eps-converted-to.pdf used on input line 317.
 (pdftex.def)             Requested size: 34.1274pt x 32.1199pt.
 Package epstopdf Info: Source file: <fly.eps>
 (epstopdf)                    date: 2017-03-30 15:00:32
@@ -1126,16 +1128,16 @@ Package epstopdf Info: Source file: <fly.eps>
 (epstopdf)                    size: 4243 bytes
 (epstopdf)             Command: <repstopdf --outfile=fly-eps-converted-to.pdf f
 ly.eps>
-(epstopdf)             \includegraphics on input line 309.
+(epstopdf)             \includegraphics on input line 322.
 Package epstopdf Info: Output file is already uptodate.
 File: fly-eps-converted-to.pdf Graphic file (type pdf)
  <use fly-eps-converted-to.pdf>
-Package pdftex.def Info: fly-eps-converted-to.pdf used on input line 309.
+Package pdftex.def Info: fly-eps-converted-to.pdf used on input line 322.
 (pdftex.def)             Requested size: 72.27492pt x 72.27565pt.
 LaTeX Font Info:    Font shape `OT1/zi4/bx/n' in size <9> not available
-(Font)              Font shape `OT1/zi4/b/n' tried instead on input line 311.
+(Font)              Font shape `OT1/zi4/b/n' tried instead on input line 324.
 LaTeX Font Info:    Font shape `OT1/zi4/b/n' will be
-(Font)              scaled to size 9.0pt on input line 311.
+(Font)              scaled to size 9.0pt on input line 324.
 Package epstopdf Info: Source file: <flies.eps>
 (epstopdf)                    date: 2017-03-30 15:00:32
 (epstopdf)                    size: 343737 bytes
@@ -1144,14 +1146,14 @@ Package epstopdf Info: Source file: <flies.eps>
 (epstopdf)                    size: 9687 bytes
 (epstopdf)             Command: <repstopdf --outfile=flies-eps-converted-to.pdf
  flies.eps>
-(epstopdf)             \includegraphics on input line 322.
+(epstopdf)             \includegraphics on input line 335.
 Package epstopdf Info: Output file is already uptodate.
 
-<flies-eps-converted-to.pdf, id=136, 307.1475pt x 114.4275pt>
+<flies-eps-converted-to.pdf, id=126, 307.1475pt x 114.4275pt>
 File: flies-eps-converted-to.pdf Graphic file (type pdf)
 
 <use flies-eps-converted-to.pdf>
-Package pdftex.def Info: flies-eps-converted-to.pdf used on input line 322.
+Package pdftex.def Info: flies-eps-converted-to.pdf used on input line 335.
 (pdftex.def)             Requested size: 307.14674pt x 114.42722pt.
 Package epstopdf Info: Source file: <rosette.eps>
 (epstopdf)                    date: 2017-03-30 15:00:32
@@ -1161,42 +1163,44 @@ Package epstopdf Info: Source file: <rosette.eps>
 (epstopdf)                    size: 2931 bytes
 (epstopdf)             Command: <repstopdf --outfile=rosette-eps-converted-to.p
 df rosette.eps>
-(epstopdf)             \includegraphics on input line 329.
+(epstopdf)             \includegraphics on input line 342.
 Package epstopdf Info: Output file is already uptodate.
 
-<rosette-eps-converted-to.pdf, id=137, 364.59212pt x 364.59212pt>
+<rosette-eps-converted-to.pdf, id=127, 364.59212pt x 364.59212pt>
 File: rosette-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rosette-eps-converted-to.pdf>
-Package pdftex.def Info: rosette-eps-converted-to.pdf used on input line 329.
+Package pdftex.def Info: rosette-eps-converted-to.pdf used on input line 342.
 (pdftex.def)             Requested size: 72.26622pt x 72.26622pt.
+ [3.3 <./fly-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 9.0pt on input line 343.
+(Font)              scaled to size 9.0pt on input line 356.
 Package microtype Info: Character `013' is missing
 (microtype)             in font `OT1/LinuxLibertineT-TLF/m/sc/9'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/sl' in size <9> not a
 vailable
 (Font)              Font shape `OT1/LinuxLibertineT-TLF/m/it' tried instead on 
-input line 364.
+input line 377.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 364.
+(Font)              scaled to size 9.0pt on input line 377.
 
 
-Package natbib Warning: Citation `Amsthm15' on page 3 undefined on input line 3
-64.
+Package natbib Warning: Citation `Amsthm15' on page 4 undefined on input line 3
+77.
 
-[3.3 <./fly-eps-converted-to.pdf>] Processing 'acks' comment.
+Processing 'acks' comment.
 \openout3 = `comment.cut'.
 
-
-Comment 'acks' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut))
+ Comment 'acks' writing to comment.cut.
+Straight input of comment.cut. (./comment.cut [4.4]))
 No file "Requirements (LaTeX, ACM template)".bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[4.4 <./flies-eps-converted-to.pdf> <./rosette-eps-converted-to.pdf>]
+[5.5
+
+ <./flies-eps-converted-to.pdf> <./rosette-eps-converted-to.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
 
@@ -1209,15 +1213,18 @@ s not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 17772 strings out of 493013
- 269995 string characters out of 6133343
+ 17777 strings out of 493013
+ 270108 string characters out of 6133343
  372391 words of memory out of 5000000
  20526 multiletter control sequences out of 15000+600000
- 131879 words of font info for 375 fonts, out of 8000000 for 9000
+ 132256 words of font info for 377 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,11n,94p,1078b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -1257,11 +1264,11 @@ local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/
 texlive/2016/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on "Requirements (LaTeX, ACM template).pdf" (4 pages, 662759 byt
+Output written on "Requirements (LaTeX, ACM template).pdf" (5 pages, 665129 byt
 es).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 248 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
  57000 words of extra memory for PDF output out of 61914 (max. 10000000)
 

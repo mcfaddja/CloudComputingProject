@@ -5,6 +5,9 @@ The software/systems chosen for comparison in this project are two different NoS
 
 
 
+%---------------------------------------------------
+%---------------------------------------------------
+
 
 
 \section{Systems and Platforms}
@@ -14,14 +17,13 @@ We will be using two NoSQL database software packages.  The first software packa
 
 \subsection{Systems}
 
-This project will run the software packages on four different systems (\emph{or types of systems}).  We have chosen systems which range from hosted \emph{SaaS} through various degrees of virtualization and then all the way to non-virtualized machines.  These systems are as follows
+This project will run the software packages on three different systems (\emph{or types of systems}).  We have chosen systems which range from hosted \emph{SaaS} through various degrees of virtualization and then all the way to non-virtualized machines.  These systems are as follows
 
 \begin{spacing}{1.40}
 \begin{enumerate}[label=\Large{\textbf{\Alph*}):}]
 	\item \textbf{\emph{SaaS}}
-	\item \textbf{Virtualization using \emph{Docker} containers}
-	\item \textbf{Virtualization on AWS's EC2 VMs}
-	\item \textbf{Dedicated, non-virtualized machines}
+	\item \textbf{Running inside a \emph{Docker} container}
+	\item \textbf{Running on a dedicated machine}
 \end{enumerate}
 \end{spacing}
 
@@ -33,21 +35,28 @@ These four systems will be deployed using several different platforms which we w
 In this system paradigm, a particular software package is developed and maintained with the intent of being used by a provider as selling \emph{Software as a Service}. As far as system configuration on our end (\emph{the system-administrator/developer}), paradigm only requires that we select a platform provider and collected the database data so that it can eventually be prepared for deployment.
 
 
-\subsubsection{\underline{Virtualization using \emph{Docker} containers} (code: \textbf{B}) }
+\subsubsection{\underline{Running inside a \emph{Docker} container} (code: \textbf{B}) }
 
-For the purposes for this paper and the ensuing project, we will only use \textbf{containers} which are created using and for use in \emph{Docker}.  This choice was made because of \emph{Docker}'s ubiquity, wide availability, and the ease of access to cloud services designed for and solely dedicated to the deployment of \emph{Docker} containers.
+For the purposes for this paper and the ensuing project, we will only use \textbf{containers} which are created using and for use in \emph{Docker}.  This choice was made because of \emph{Docker}'s ubiquity, wide availability, and the ease of access to cloud services designed for and solely dedicated to the deployment of \emph{Docker} containers.  This implementation paradigm requires that a \emph{Docker} container be created after which, the software package in question be installed into the container so that it can be run on the operating system employed in the container (\emph{the OS\footnote{\textbf{OS: } Operating System} was chosen at the time of container creation}). Additionally, as far as this paper and project are concerned, the use of a \emph{Docker} container as a means of implementation does not imply the use of any particular platform for running the containers, or even a deployment of the \emph{Docker} software/system itself. 
 
 
+\subsubsection{\underline{Running on a dedicated machine} (code: \textbf{C}) }
+
+The third system paradigm involves acquiring and configuring a dedicated machine which can be either an actual, physical machine or a virtual machine.  In either case, the machine will have performance specifications and and run an OS appropriate for our planed use.  When setting up one of these machines, after configuration and setup of physical/virtual system, the selected OS will be installed and configured for use.  Once it has been verified that the OS has been properly installed and configured (\emph{i.e. running stably}) we will install the software selected for testing on that instance, along with any other software or system components required to run that software.  After configuring the installed software, the machine will be prepared and configured for use as a server running said software.  The final step of this paradigm is preparing the software and system combination for final deployment to the selected platform.
+
+
+
+%---------------------------------------------------
 
 
 \subsection{Platforms}
 
-We have chosen three different platforms on which to deploy our systems.  The chosen platforms span the range of cloud service paradigms from \emph{SaaS} to \emph{PaaS}\footnote{\textbf{PaaS :} Platform as a service.} to \emph{IaaS}\footnote{\textbf{IaaS :} Infrastructure as a service.}.  We list the three platforms, along with two variations on one of the platforms, below
+We have chosen four different platforms on which to deploy our systems.  The chosen platforms span the range of cloud service paradigms from \emph{SaaS} to \emph{PaaS}\footnote{\textbf{PaaS :} Platform as a service.} to \emph{IaaS}\footnote{\textbf{IaaS :} Infrastructure as a service.}.  We list the three platforms, along with two variations on one of the platforms, below
 
 \begin{spacing}{1.40}
 \begin{enumerate}[label=\Large{\textbf{\arabic*}):}]
-	%\item \textbf{AWS's DynamoDB Service (}\emph{SaaS}\textbf{)}
-	\item \textbf{AWS \emph{SaaS} system(s)}
+	\item \textbf{(An) AWS Software Service (}\emph{SaaS}\textbf{)}
+	%\item \textbf{AWS \emph{SaaS} system(s)}
 	\item \textbf{Containerized implementations (}using \emph{Docker}\textbf{) running on}
 
 	\begin{enumerate}[label=\Large{\textbf{\roman*}):}]
@@ -61,10 +70,14 @@ We have chosen three different platforms on which to deploy our systems.  The ch
 \end{enumerate}
 \end{spacing}
 
-In the next section, we list which systems will run each software package, along with a explanation why each software-system pairing was chosen.  Additionally, we will describe which platforms will be used to deploy each system and why those deployment choices were made.
+
+In the next section, we list which systems will run each software package, along with a explanation why each software-system pairing was chosen.  Additionally, we will describe which platforms will be used to deploy each system and why those deployment choices were made.  
 
 
 
+
+%---------------------------------------------------
+%---------------------------------------------------
 
 
 
