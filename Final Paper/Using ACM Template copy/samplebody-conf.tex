@@ -1,13 +1,93 @@
 \section{Introduction}
 
-Initially, we were going to do a software/systems comparison, with the software/systems chosen for comparison in this project being two different NoSQL database system.  These systems would have been deployed/run/operated in several different ways, including \emph{SaaS}\footnote{\textbf{SaaS :} Software as a service.} implementations, \emph{containerized} implementations, and \emph{native installations}.  The goal of the project would have been to understand the performance characteristics of each deployment method \emph{\textbf{and}} to quantify the costs of each deployment method, with the costs being calculated based on the hourly cost to operate, the initial time \& costs required for setup, and the maintenance requirement of a deployment.  Additionally, performance of the systems and deployments would have been measured using the time required to carry out various database operations, under a set of several different conditions, as well as the CPU, memory, and network loads imposed by the various deployments under the same set of conditions. As we proceeded with the project, however, we discovered that this approach was too complex and had too broad a scope.
+Initially, we were going to do a software/systems comparison, with the software/systems chosen for comparison in this project being two different NoSQL database system.  These systems would have been deployed/run/operated in several different ways, including \emph{SaaS}\footnote{\textbf{SaaS :} Software as a service.} implementations, \emph{containerized} implementations, and \emph{native installations}.  The goal of the project would have been to understand the performance characteristics of each deployment method \emph{\textbf{and}} to quantify the costs of each deployment method, with the costs being calculated based on the hourly cost to operate, the initial time \& costs required for setup, and the maintenance requirement of a deployment.  Additionally, performance of the systems and deployments would have been measured using the time required to carry out various database operations, under a set of several different conditions, as well as the CPU, memory, and network loads imposed by the various deployments under the same set of conditions. As we proceeded with the project, however, we discovered that there was no way to properly cover all of these topics within a single project 
 
 
 %--------------------------------
 
 \subsection{Changed Questions}
 
-Ultimately, we decided that our initial approach was too complex and beyond the intended scope of the project.  Therefore, were limited ourselves to comparing DynamoDB from AWS and BigTable from Google's Cloud Services.  Unfortunately, BigTable is difficult to deploy for even a simple test case so we were again forced to alter our plan, this time by swapping BigTable for CosmosDB from Azure.
+Ultimately, we decided that our initial approach was too complex and beyond the intended scope of the project; therefore, were limited ourselves to comparing DynamoDB from AWS and BigTable from Google's Cloud Services.  We also changed our comparison of the services to be based on metrics measuring their performance, features, usability, and cost; while also setting a specific and narrow scope for each metric.  The performance metric is limited to separately measuring both data throughput and query latency under a variety of load a replication conditions; while the features metric will concentrate on features available from each provider, such as provisioning and tools for interacting with their respective service.  Our usability metric will focus on both the ease of implementing software to use each service, as well as the availability in terms of the number of supported languages, the number of available APIs \& SDKs, and the availability of third-party software for interacting with each service.  Finally, our cost metric will focus on the costs associated with the setup and operation of each service, however, it will also attempt to cover costs which might be encountered when implementing software making use of each service.
+
+
+%--------------------------------
+
+\subsection{Service Change}
+
+Unfortunately, BigTable is difficult to deploy for even a simple test case, as it requires the configuration of multiple cloud services on Google's cloud and the installation of multiple Linux-only software packages, namely rBase \& Hadoop.  Thus, we were again forced to alter our plan, this time by swapping BigTable from Google for CosmosDB from Azure.  This swap also lead to an additional feature to consider and condition to test under, the replication two or more of each cloud service's availability zones.
+
+
+
+
+%--------------------------------
+%--------------------------------
+
+
+\section{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
