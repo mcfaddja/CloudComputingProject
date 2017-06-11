@@ -199,7 +199,7 @@ We considered just two types of Data Throughput and we only considered them sepa
 
 \subsection{Load Conditions}
 
-When running an experiment, we would use one of seven distinct kinds load conditions, where each load condition is characterized in terms of two different parameters.  The parameters used to characterize each load condition were the level of load\footnote{level of load = as a fraction or percentage of the total provisioned I/O capacity} and the direction of the load.  The types of load conditions we use are as follows :
+When running an experiment, we would use one of five distinct kinds load conditions, where each load condition is characterized in terms of two different parameters.  The parameters used to characterize each load condition were the level of load\footnote{level of load = as a fraction or percentage of the total provisioned I/O capacity} and the direction of the load.  The types of load conditions we use are as follows :
 
 \vspace{0.1in}
 \begin{spacing}{1.2}
@@ -210,15 +210,20 @@ When running an experiment, we would use one of seven distinct kinds load condit
 	\vspace{0.05in}
 	\item \textbf{\underline{Half-load pulling} :} Pulling data to the database at half of the provisioned write capacity.
 	\vspace{0.05in}
-	\item \textbf{\underline{Half-load pushing \emph{and} pulling} :} Pushing \emph{\textbf{and}} pulling data to the database at half of the provisioned total read/write capacity (\emph{applies to CosmosDB only}).
-	\vspace{0.05in}
 	\item \textbf{\underline{Full-load pushing} :} Pushing data to the database at the full provisioned write capacity.
 	\vspace{0.05in}
 	\item \textbf{\underline{Full-load pulling} :} Pulling data to the database at the full provisioned write capacity.
-	\vspace{0.05in}
-	\item \textbf{\underline{Full-load pushing \emph{and} pulling} :}. Pushing \emph{\textbf{and}} pulling data to the database at the full value of the provisioned total read/write capacity (\emph{applies to CosmosDB only}).
 \end{enumerate}
 \end{spacing}
+
+
+
+
+%--------------------------------
+%--------------------------------
+
+
+\section{Results}
 
 
 

@@ -1043,13 +1043,7 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 55.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 114.
-[2.2] [3.3]
-Overfull \hbox (5.32065pt too wide) in paragraph at lines 214--216
-\OT1/LinuxLibertineT-TLF/m/n/9 (-20) data to the data-base at half of the pro-v
-i-sioned to-tal read/write
- []
-
-)
+[2.2] [3.3])
 No file "Final Paper (LaTeX, ACM template)".bbl.
 [4.4
 
@@ -1059,14 +1053,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
  (./Final Paper (LaTeX, ACM template).aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
-Package rerunfilecheck Info: File `"Final Paper (LaTeX, ACM template)".out' has
- not changed.
-(rerunfilecheck)             Checksum: FAAE10C5BE26C9E1FF8213C91007A0E6;989.
+
+
+Package rerunfilecheck Warning: File `"Final Paper (LaTeX, ACM template)".out' 
+has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Final Paper (LaTeX, ACM template)"
+.out':
+(rerunfilecheck)             Before: FAAE10C5BE26C9E1FF8213C91007A0E6;989
+(rerunfilecheck)             After:  16C5ED16971274480EC809EFBFA4D04A;1034.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
  ) 
 Here is how much of TeX's memory you used:
- 14284 strings out of 493014
- 224019 string characters out of 6133351
+ 14283 strings out of 493014
+ 224014 string characters out of 6133351
  345514 words of memory out of 5000000
  17142 multiletter control sequences out of 15000+600000
  105415 words of font info for 305 fonts, out of 8000000 for 9000
@@ -1117,11 +1119,11 @@ ibertineTB.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine
 /LinLibertineTBI.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lib
 ertine/LinLibertineTI.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
 c/txfonts/txsy.pfb>
-Output written on "Final Paper (LaTeX, ACM template).pdf" (4 pages, 417276 byte
+Output written on "Final Paper (LaTeX, ACM template).pdf" (4 pages, 416354 byte
 s).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 63 named destinations out of 1000 (max. 500000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
+ 62 named destinations out of 1000 (max. 500000)
  46713 words of extra memory for PDF output out of 51595 (max. 10000000)
 
