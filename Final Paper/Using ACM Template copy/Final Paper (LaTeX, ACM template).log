@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  10 JUN 2017 19:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  10 JUN 2017 19:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1025,36 +1025,34 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 7.0pt on input line 3.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/it' will be
 (Font)              scaled to size 9.0pt on input line 3.
-)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1.1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+])
 No file "Final Paper (LaTeX, ACM template)".bbl.
-[1.1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 134.
+[2.2
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
-
-(./Final Paper (LaTeX, ACM template).aux)
+ (./Final Paper (LaTeX, ACM template).aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
-
-
-Package rerunfilecheck Warning: File `"Final Paper (LaTeX, ACM template)".out' 
-has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Final Paper (LaTeX, ACM template)"
-.out':
-(rerunfilecheck)             Before: 781922C82F5A9EDA87473952E0131328;163
-(rerunfilecheck)             After:  DC1A53F5067F8B5C93BF3E3C3E920689;230.
+Package rerunfilecheck Info: File `"Final Paper (LaTeX, ACM template)".out' has
+ not changed.
+(rerunfilecheck)             Checksum: DD34FE32782B79553B3C2F832757948D;285.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
  ) 
 Here is how much of TeX's memory you used:
- 14134 strings out of 493014
- 221255 string characters out of 6133351
- 343508 words of memory out of 5000000
- 17116 multiletter control sequences out of 15000+600000
- 94676 words of font info for 257 fonts, out of 8000000 for 9000
+ 14158 strings out of 493014
+ 221821 string characters out of 6133351
+ 344508 words of memory out of 5000000
+ 17120 multiletter control sequences out of 15000+600000
+ 97577 words of font info for 269 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,11n,94p,1313b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
@@ -1078,11 +1076,11 @@ ibertineTB.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine
 /LinLibertineTBI.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lib
 ertine/LinLibertineTI.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
 c/txfonts/txsy.pfb>
-Output written on "Final Paper (LaTeX, ACM template).pdf" (1 page, 365632 bytes
-).
+Output written on "Final Paper (LaTeX, ACM template).pdf" (2 pages, 372811 byte
+s).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 41497 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 45609 words of extra memory for PDF output out of 51595 (max. 10000000)
 
