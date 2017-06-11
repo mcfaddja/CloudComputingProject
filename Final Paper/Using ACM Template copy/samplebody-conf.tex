@@ -27,6 +27,107 @@ Unfortunately, BigTable is difficult to deploy for even a simple test case, as i
 
 We decided on our metrics of performance, features, usability, and cost based on five research questions.  Each question was designed based on one or two metrics choices from our first three metrics (performance, features, and usability), with cost being considered separately over all relevant questions.  The research questions we developed are 
 
+\vspace{0.1in}
+\begin{spacing}{1.2}
+\begin{enumerate}[label=\Large{\textbf{\arabic*}):}]
+	\item How do the costs and provisioning implementations compare?
+	\vspace{0.05in}
+	\item Are we getting what we pay for (\emph{provision}) W.R.T.\footnote{W.R.T. = with respect to} capacity and space?
+	\vspace{0.05in}
+	\item How efficient is use of the service W.R.T. latency and throughput?
+	\vspace{0.05in}
+	\item How easy is it to implement connections in software or applications? How easy is it to push/pull data?  What kind of tools are available from each provider for interacting with the database?
+	\vspace{0.05in}	\item What kinds of replication are available and how are they accomplished?
+\end{enumerate}
+\end{spacing}
+
+
+%--------------------------------
+
+\subsection{Provisioning Costs and Implementations}
+
+When answering, "\emph{\textbf{How do the costs and provisioning implementations compare?}}" we are interested in exploring two things.  The first thing in which we are interested is each service's implementation of database provisioning, with specific attention being paid to how provisioning is characterized by each service.  Specifically, we what to know how each service parameterizes the provisioning of databases in their NoSQL services.  To cover this part of our first research question, we have the following "sub-questions" :
+
+\vspace{0.1in}
+\begin{spacing}{1.2}
+\begin{enumerate}[label=\large{\textbf{1 - \Alph*}):}]
+	\item Are reads and writes provisioned separately or together?  
+	\vspace{0.05in}
+	\item What counts as a database "\emph{item}"?
+	\vspace{0.05in}
+	\item Is there an assumption with regard to the size of database "\emph{items}" or is that an additional provisioning parameter?
+	\vspace{0.05in}
+	\item Is the disk space required to store the database used as a parameter?
+\end{enumerate}
+\end{spacing}
+
+The second and last thing we wish to explore is the cost model used by each provider, especially how it relates to database use and data size.  To cover the second part of this research question, we will add the following "sub-questions" :
+
+\vspace{0.1in}
+\begin{spacing}{1.2}
+\begin{enumerate}[label=\large{\textbf{1 - \Alph*}):}]
+	\addtocounter{enumi}{4} 
+	\item Are reads and writes charged at the same or different rates?
+	\vspace{0.05in}
+	\item Does the provisioned cost of database depend on its level of use?
+	\vspace{0.05in}
+	\item Does the size of database "items" affect the cost of provisioning?
+	\vspace{0.05in}
+	\item Is the disk space required to store the database included in the previous provisioning costs or does it constitute another, additional cost dimension?
+\end{enumerate}
+\end{spacing}
+
+
+%--------------------------------
+
+\subsection{Getting what we pay for}
+
+Given that using a NoSQL database on a cloud service incurs an hourly cost that can be significant, it is natural to wonder, "\emph{\textbf{Are we getting what we pay for (}provision\textbf{) W.R.T. capacity and space?}}".  To answer this question, we will test each service using two different methods of testing.  In the first testing method, we will push a large dataset up to each database while measuring the throughput in \textbf{items written per second}.  Similarly, in the second method, we will pull a large dataset down from each database while again measuring the throughput in \textbf{items written per second}.  
+
+
+%--------------------------------
+
+\subsection{Efficiency of throughput and latency}
+
+No matter the type of database, the primary metric of any heavily used database is latency of queries, measured in \textbf{ms}.\footnote{\textbf{ms} = milliseconds}  This led us to ask, "\emph{\textbf{How efficient is use of the service W.R.T. latency and throughput?}}" as one of our research questions.  To answer this question, we will run queries on the database under three different conditions with each condition representing a different level of load on the database service.  These load levels are
+
+\vspace{0.1in}
+\begin{spacing}{1.2}
+\begin{enumerate}[label=\large{\textbf{3 - \Alph*}):}]
+	\item \textbf{\underline{None} :} No load on the database other than the query being measured.
+	\vspace{0.05in}
+	\item \textbf{\underline{Half-load} :} Pushing or pulling data to or from the database at half of the provisioned write or read capacity.
+	\vspace{0.05in}
+	\item \textbf{\underline{Full-load} :} Pushing or pulling data to or from the database at the full provisioned write or read capacity.
+\end{enumerate}
+\end{spacing}
+
+
+%--------------------------------
+
+\subsection{Ease of use}
+
+The goal of having any type of database, regardless of database type or location, is to efficiently store data for retrieval by means of some software or application.  Furthermore, in most cases, a database must be populated with data before it can be used, therefore there must be a way of initially populating the database after its creation. These considerations led us to ask, "\emph{\textbf{How easy is it to implement connections in software or applications?}}" and, "\emph{\textbf{How easy is it to push/pull data?}}" which we combined into our fourth research question.  To answer these questions we considered the general areas of database APIs/Models, software SDKs/APIs, and tools provided by each service.
+
+When looking at the Database APIs/Models area, we wanted to look at the database systems or data storage/retrieval models offered by each service.  Specifically, we wanted to know how many different database implementations/languages each service supported or provided.  As both services were NoSQL databases, we also wanted to see if either service offered any unique or interesting data storage/retrieval models.  In-line with looking at different database languages, we wanted to look at what programing languages or SDKs could be used for writing software to connect to each database service.  Importantly, we wanted to know how well developed the  libraries and APIs were in each supported language and what, if any, costs would be incurred in order to use a particular supported language.  Additionally, since the software or application connected to that database could also be provided by a third-party, we wanted to see what third-party software was available for each service.  
+
+Finally, we wanted to see what tools each cloud provider had available for interacting with their NoSQL database services, as well as compare the tool or tools offered by each service.  When comparing the tools, we wanted to know if there were any costs associated with using them and if those costs were one-time (\emph{buy the tool}) or if the costs would recur in some way.  The second, and last, aspect of exploring the provided tools was a comparison of each tool's ease of use.
+
+
+%--------------------------------
+
+\subsection{Replication}
+
+The final area we were interested in covered database replication, as replication of a database improves its reliability and can improve its performance.  This lead us to ask, "\emph{\textbf{What kinds of replication are available and how are they accomplished?}}" as our fifth and final research question.  As we will see when we describe the experiments we ran, this also led to us attempting to run experiments with and without replication.
+
+
+
+
+%--------------------------------
+%--------------------------------
+
+
+\section{Experiments}
 
 
 
@@ -44,6 +145,23 @@ We decided on our metrics of performance, features, usability, and cost based on
 
 
 
+
+
+
+
+
+
+
+%\vspace{0.1in}
+%\begin{spacing}{1.2}
+%\begin{enumerate}[label=\large{\textbf{3-\Alph*}):}]
+%	\item \textbf{\underline{None} :} No load on the database other than the query being measured.
+%	\vspace{0.05in}
+%	\item \textbf{\underline{Half-load pushing} :} Pushing data to the database at half of the provisioned write capacity.
+%	\vspace{0.05in}
+%	\item \textbf{\underline{Half-load 
+%\end{enumerate}
+%\end{spacing}
 
 
 
