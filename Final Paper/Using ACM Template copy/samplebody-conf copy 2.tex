@@ -183,7 +183,7 @@ There were two primary metrics used in this project, with each experiment only m
 
 \subsection{Throughput Types}
 
-We considered just two types of Data Throughput (\emph{along with a \textbf{\underline{NULL}} condition} and we only considered them separately\footnote{"\emph{considered them separately} = i.e. one or the other, not both}.  These types of Data Throughput are as follows :
+We considered just two types of Data Throughput and we only considered them separately\footnote{"\emph{considered them separately} = i.e. one or the other, not both}.  These types of Data Throughput are as follows :
 
 \vspace{0.1in}
 \begin{spacing}{1.2}
@@ -191,8 +191,6 @@ We considered just two types of Data Throughput (\emph{along with a \textbf{\und
 	\item Pushing, where we pushed data up to the database.
 	\vspace{0.05in}
 	\item Pulling, where were pull data down from the database.
-	\vspace{0.05in}
-	\item Not applicable (\emph{also denoted by} \textbf{\large{3-N/A}})
 \end{enumerate}
 \end{spacing}
 
@@ -201,16 +199,20 @@ We considered just two types of Data Throughput (\emph{along with a \textbf{\und
 
 \subsection{Load Conditions}
 
-When running an experiment, we would use one of three distinct kinds load conditions, where each load condition is characterized in terms of the level of load\footnote{level of load = as a fraction or percentage of the total provisioned I/O capacity} and the direction of the load.  The types of load conditions we use are as follows :
+When running an experiment, we would use one of five distinct kinds load conditions, where each load condition is characterized in terms of two different parameters.  The parameters used to characterize each load condition were the level of load\footnote{level of load = as a fraction or percentage of the total provisioned I/O capacity} and the direction of the load.  The types of load conditions we use are as follows :
 
 \vspace{0.1in}
 \begin{spacing}{1.2}
 \begin{enumerate}[label=\large{\textbf{4-\alph*}):}]
 	\item \textbf{\underline{None} :} No load on the database other than the query being measured.
 	\vspace{0.05in}
-	\item \textbf{\underline{Half-load pushing} :} Pushing or pulling data to or from the database at half of the provisioned write/read capacity.
+	\item \textbf{\underline{Half-load pushing} :} Pushing data to the database at half of the provisioned write capacity.
 	\vspace{0.05in}
-	\item \textbf{\underline{Full-load pushing} :} Pushing or pulling data to or from the database at the full provisioned write/read capacity.
+	\item \textbf{\underline{Half-load pulling} :} Pulling data to the database at half of the provisioned write capacity.
+	\vspace{0.05in}
+	\item \textbf{\underline{Full-load pushing} :} Pushing data to the database at the full provisioned write capacity.
+	\vspace{0.05in}
+	\item \textbf{\underline{Full-load pulling} :} Pulling data to the database at the full provisioned write capacity.
 \end{enumerate}
 \end{spacing}
 
@@ -219,53 +221,7 @@ When running an experiment, we would use one of three distinct kinds load condit
 
 \subsection{Experiment List}
 
-In total, we ran fifteen separate experiments with each experiment undergoing ten different runs to ensure that enough data was collected to provide statistically significance.  Each experiment was categorized using the identifiers \textbf{\underline{1-a} $\Rightarrow$ \underline{1-c}}, \textbf{\underline{2-a} $\Rightarrow$ \underline{2-b}}, \textbf{\underline{3-a} $\Rightarrow$ \underline{3-b}}, and \textbf{\underline{4-a} $\Rightarrow$ \underline{4-c}}, where each identifier corresponds to an item from \textbf{Section 3.1} through \textbf{Section 3.4}.  For instance, an experiment classified by the identifiers \textbf{1-a; 2-a, 3-a, 4-a} indicates that we are measuring DynamoDB's data throughput by pushing data to it while the service is not under any other load.  The experiments we ran, are as showing in \textbf{Table \ref{tab:expts}}.
 
-\vspace{0.1in}
-\begin{table*}
-    \caption{Experiments and their properties by identifier.}
-    \label{tab:expts}
-    \begin{spacing}{1.5}
-    \begin{tabular}{c || c | c | c | c }
-    	\hline
-    	 & & & & \\
-    	\textbf{\underline{\Large{Experiment \#}}} & \textbf{\underline{\large{Subject}}} & \textbf{\underline{\large{Primary Metric}}} & \textbf{\underline{\large{Throughput Type}}} & \textbf{\underline{\large{Load Condition}}} \\
-    	 & & & & \\
-    	\hline
-    	\hline
-    	\textbf{\large{1}} & \textbf{1-a} & \textbf{2-a} & \textbf{3-a} & \textbf{4-N/A} \\
-    	\hline
-    	\textbf{\large{2}} & \textbf{1-a} & \textbf{2-a} & \textbf{3-b} & \textbf{4-N/A} \\
-    	\hline
-    	\textbf{\large{3}} & \textbf{1-b} & \textbf{2-a} & \textbf{3-a} & \textbf{4-N/A} \\
-    	\hline
-    	\textbf{\large{4}} & \textbf{1-b} & \textbf{2-a} & \textbf{3-b} & \textbf{4-N/A} \\
-    	\hline
-    	\textbf{\large{5}} & \textbf{1-c} & \textbf{2-a} & \textbf{3-a} & \textbf{4-N/A} \\
-    	\hline
-    	\textbf{\large{6}} & \textbf{1-c} & \textbf{2-a} & \textbf{3-b} & \textbf{4-N/A} \\
-    	\hline
-    	\textbf{\large{7}} & \textbf{1-a} & \textbf{2-b} & \textbf{3-a} & \textbf{4-a} \\
-	\hline
-    	\textbf{\large{8}} & \textbf{1-a} & \textbf{2-b} & \textbf{3-a} & \textbf{4-b} \\
-	\hline
-    	\textbf{\large{9}} & \textbf{1-a} & \textbf{2-b} & \textbf{3-a} & \textbf{4-c} \\
-	\hline
-    	\textbf{\large{10}} & \textbf{1-b} & \textbf{2-b} & \textbf{3-a} & \textbf{4-a} \\
-	\hline
-    	\textbf{\large{11}} & \textbf{1-b} & \textbf{2-b} & \textbf{3-a} & \textbf{4-b} \\
-	\hline
-    	\textbf{\large{12}} & \textbf{1-b} & \textbf{2-b} & \textbf{3-a} & \textbf{4-c} \\
-	\hline
-    	\textbf{\large{13}} & \textbf{1-c} & \textbf{2-b} & \textbf{3-a} & \textbf{4-a} \\
-	\hline
-    	\textbf{\large{14}} & \textbf{1-c} & \textbf{2-b} & \textbf{3-a} & \textbf{4-b} \\
-	\hline
-    	\textbf{\large{15}} & \textbf{1-c} & \textbf{2-b} & \textbf{3-a} & \textbf{4-c} \\
-	\hline
-    \end{tabular}
-    \end{spacing}
-\end{table*}
 
 
 
@@ -276,67 +232,24 @@ In total, we ran fifteen separate experiments with each experiment undergoing te
 
 \section{Results}
 
-The results of our experiments can be divided into two groups based on the \textbf{Primary Metric} measured by the experiment.  The first group of experiments used \emph{\underline{Data Throughput}} (\textbf{2-a}) as the primary metric.  Thus, the first results group consists of experiments having \textbf{Experiment \#'s} of \textbf{1} through \textbf{6}.  
-
-The only other \textbf{Primary Metric} we used was \emph{\underline{Query Latency}} (\textbf{2-b}), so the other group of experimental results is those experiments using this as their primary metric.  Thus, the second, and last, results group consists of experiments having \textbf{Experiment \#'s} of \textbf{7} through \textbf{15}.  For clarity, we list each \textbf{Experiment Results Group}, along with the corresponding members, as follows :
-
-\vspace{0.1in}
-\begin{spacing}{1.2}
-\begin{enumerate}[label=\large{\textbf{Res-\Alph*}):}]
-	\item Based on the primary metric \underline{\emph{Data Throughput}}.  Has members \textbf{1, 2, 3, 4, 5, \& 6}.
-	\vspace{0.05in}
-	\item Based on the primary metric \underline{\emph{Query Latency}}.  Has members \textbf{7, 8, 9, 10, 11, 12, 13, 14, \& 15}.
-\end{enumerate}
-\end{spacing}
 
 
-%--------------------------------
-
-\subsection{Data Throughput: Results}
-
-Since the first group of experimental results used \emph{\underline{Data Throughput}} (\textbf{2-a}) as its primary metric, the results of this group are measured in the number of items written or read per second.  These results are given, for each run of each experiment, in \textbf{Table \ref{tab:res1}}.
-
-\vspace{0.1in}
-\begin{table*}
-    \caption{Results of First Experiment Group}
-    \label{tab:res1}
-    \begin{spacing}{1.5}
-    \begin{tabular}{ c || c | c | c | c | c | c }
-    	\hline
-	\textbf{\Large{Experiment \#}} & \textbf{\large{\# 1}} & \textbf{\large{\# 2}} & \textbf{\large{\# 3}} & \textbf{\large{\# 4}} & \textbf{\large{\# 5}} & \textbf{\large{\# 6}} \\
-	\hline
-	$\begin{array}{c} \text{\textbf{\large{Data}}} \\ \text{\textbf{\large{Throughput}}} \\ \text{\textbf{\large{(\emph{items / sec})}}}\end{array}$ & $\begin{array}{c} 10001 \\ 10002 \\ 10000 \\ 9999 \\ 9998 \\ 10000 \\ 9997 \\ 10002 \\ 10001 \\ 10000 \end{array}$ & $\begin{array}{c} 10000 \\ 10002 \\ 10000 \\ 9999 \\ 10000 \\ 10000 \\ 9998 \\ 10001 \\ 10000 \\ 10000 \end{array}$ & $\begin{array}{c} 10001 \\ 10002 \\ 10002 \\ 10000 \\ 9999 \\ 10000 \\ 10000 \\ 9998 \\ 10000 \\ 9997 \end{array}$ & $\begin{array}{c} 10000 \\ 9999 \\ 10000 \\ 10000 \\ 9998 \\ 10000 \\ 9998 \\ 10002 \\ 10001 \\ 10002 \end{array}$ 	& $\begin{array}{c} 10000 \\ 9999 \\ 10000 \\ 10000 \\ 9998 \\ 10000 \\ 9997 \\ 10001 \\ 10002 \\ 10002 \end{array}$ & $\begin{array}{c} 9996 \\ 9999 \\ 10000 \\ 10000 \\ 9998 \\ 10000 \\ 9997 \\ 10002 \\ 10000 \\ 10002 \end{array}$ \\
-	\hline
-    \end{tabular}
-    \end{spacing}
-\end{table*}
 
 
-%--------------------------------
 
-\subsection{Query Latency: Results}
 
-The second group of experimental results used \emph{\underline{Query Latency}} (\textbf{2-a}) as their primary metric, so the results of this group are measured by the time (\emph{in \textbf{ms}}\footnote{ms = milliseconds}) required to return the response to a simple query.  These results are given, for each run of each experiment, in \textbf{Table \ref{tab:res2}}.
 
-\vspace{0.1in}
-\begin{table*}
-    \caption{Results of Second Experiment Group}
-    \label{tab:res2}
-    \begin{spacing}{1.5}
-    \begin{tabular}{ c || c | c | c | c | c | c | c | c | c }
-    	\hline
-	\textbf{\Large{Experiment \#}} & \textbf{\large{\# 7}} & \textbf{\large{\# 8}} & \textbf{\large{\# 9}} & \textbf{\large{\# 10}} & \textbf{\large{\# 11}} & \textbf{\large{\# 12}} & \textbf{\large{\# 13}} & \textbf{\large{\# 14}} & \textbf{\large{\# 15}} \\
-	\hline
-	$\begin{array}{c} \text{\textbf{\large{Query}}} \\ \text{\textbf{\large{Latency}}} \\ \text{\textbf{\large{(\emph{milliseconds})}}}\end{array}$ & $\begin{array}{c} 14.2 \\ 14.5 \\ 14.6 \\ 14.7 \\ 14.3 \\ 14.1 \\ 14.0 \\ 14.8 \\ 14.6 \\ 14.2 \end{array}$ & $\begin{array}{c} 14.3 \\ 14.4 \\ 14.6 \\ 14.6 \\ 14.4 \\ 14.6 \\ 14.7 \\ 14.8 \\ 14.6 \\ 14.8 \end{array}$ & $\begin{array}{c} 55.1 \\ 55. 5 \\ 56.1 \\ 55.9 \\ 55.6 \\ 55.7 \\ 55.3 \\ 55.5 \\ 55.2 \\ 55.7 \end{array}$ & $\begin{array}{c} 75.1 \\ 100.9 \\ 16.1 \\ 16.8 \\ 60.1 \\ 85.1 \\ 40.1 \\ 15.9 \\ 17.8 \\ 40.9 \end{array}$ 
-	& $\begin{array}{c} 100.9 \\ 16.1 \\ 19.8 \\ 85.1 \\ 40.1 \\ 103.1 \\ 104.5 \\ 92.7 \\ 24.6 \\ 75.3 \end{array}$
-	& $\begin{array}{c}  201.3 \\ 450.6 \\ 550.7 \\ 727.4 \\ 825.3 \\ 836.9 \\ 700.3 \\ 525.6 \\ 450.7 \\ 150.8 \end{array}$
-	& $\begin{array}{c}  26.6 \\ 36. 5 \\ 30.3 \\ 20.4 \\ 40.8 \\ 55.6 \\ 16.8 \\ 16.9 \\ 33.8 \\ 37.2 \end{array}$
-	& $\begin{array}{c}  55.1 \\ 55. 5 \\ 53.9 \\ 55.6 \\ 55.7 \\ 55.3 \\ 55.5 \\ 55.2 \\ 53.1 \\ 53.3 \end{array}$
-	&  $\begin{array}{c} 125.6 \\ 400.8 \\ 575.8 \\ 701.4 \\ 853.7 \\ 839.2 \\ 750.3 \\ 505.3 \\ 450.7 \\ 124.8 \end{array}$ \\
-	\hline
-    \end{tabular}
-    \end{spacing}
-\end{table*}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

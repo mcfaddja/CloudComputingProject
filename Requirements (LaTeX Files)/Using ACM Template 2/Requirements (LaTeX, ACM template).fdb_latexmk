@@ -1,0 +1,17 @@
+# Fdb version 3
+["pdflatex"] 1492203835 "Requirements (LaTeX, ACM template).tex" "Requirements (LaTeX, ACM template).pdf" "Requirements (LaTeX, ACM template)" 1492204352
+  "/etc/texmf/web2c/texmf.cnf" 1489760290 2206 e7a375f2b010c289484f1852e3333a69 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1488872290 31080 e10744b84ae6cc364fc80325dc2b62c1 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1488872290 31080 e10744b84ae6cc364fc80325dc2b62c1 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1489760266 3840967 d9db6e0b1855ad5f48fbb8098730b7aa ""
+  "Requirements (LaTeX, ACM template).aux" 1492202804 5100 048d48ec76d4a1d095ee885b13ddb856 ""
+  "Requirements (LaTeX, ACM template).tex" 1492204352 3933 5b8ce25caf98c9e75fbacef18648b448 ""
+  "acmart.cls" 0 -1 0 ""
+  (generated)
+  "Requirements (LaTeX, ACM template).log"
+  "Requirements (LaTeX, ACM template).pdf"
+  "rosette-eps-converted-to.pdf"
+  "comment.cut"
+  "fly-eps-converted-to.pdf"
+  "Requirements (LaTeX, ACM template).aux"
+  "flies-eps-converted-to.pdf"
