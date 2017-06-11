@@ -1,0 +1,118 @@
+\section{Introduction}
+
+The software/systems chosen for comparison in this project are two different NoSQL database system.  These systems will be deployed/run/operated in several different ways.  These include \emph{SaaS}\footnote{\textbf{SaaS :} Software as a service.} implementations, \emph{containerized} implementations, and \emph{native installations}.  The goal of the project is to understand the performance characteristics of each deployment method \emph{\textbf{and}} to quantify the costs of each deployment method.  These costs will be calculated based on the hourly cost to operate, the initial time \& costs required for setup, and the maintenance requirement of a deployment.  Additionally, performance of the systems and deployments will be measured using the time required to carry out various database operations, under a set of several different conditions, as well as the CPU, memory, and network loads imposed by the various deployments under the same set of conditions.
+
+
+
+
+%---------------------------------------------------
+%---------------------------------------------------
+
+
+
+\section{Systems and Platforms}
+We will be using two NoSQL database software packages.  The first software package is \textbf{DynamoDB} from Amazon Web Services (\emph{AWS}), while the second software package will be \textbf{Cassandra}, an open-source NoSQL database software package.  These software packages will be deployed using several different systems and platforms, as described below.
+
+
+
+\subsection{Systems}
+
+This project will run the software packages on three different systems (\emph{or types of systems}).  We have chosen systems which range from hosted \emph{SaaS} through various degrees of virtualization and then all the way to non-virtualized machines.  These systems are as follows
+
+\begin{spacing}{1.30}
+\begin{enumerate}[label=\Large{\textbf{\Alph*}):}]
+	\item \textbf{\emph{SaaS}}
+	\item \textbf{Running inside a \emph{Docker} container}
+	\item \textbf{Running on a dedicated machine}
+\end{enumerate}
+\end{spacing}
+
+These four systems will be deployed using several different platforms which we will describe in the next part of this section; however, before proceeding to that, we will give a through description of each system listed above.
+
+
+\subsubsection{\underline{\emph{SaaS}} (code: \textbf{A}) }
+In this system paradigm, a particular software package is developed and maintained with the intent of being used by a provider as selling \emph{Software as a Service}. As far as system configuration on our end (\emph{the system-administrator/developer}), paradigm only requires that we select a platform provider and collected the database data so that it can eventually be prepared for deployment.
+
+
+\subsubsection{\underline{Running inside a \emph{Docker} container} (code: \textbf{B}) }
+For the purposes for this paper and the ensuing project, we will only use \textbf{containers} which are created using and for use in \emph{Docker}.  This choice was made because of \emph{Docker}'s ubiquity, wide availability, and the ease of access to cloud services designed for and solely dedicated to the deployment of \emph{Docker} containers.  This implementation paradigm requires that a \emph{Docker} container be created after which, the software package in question be installed into the container so that it can be run on the operating system employed in the container (\emph{the OS\footnote{\textbf{OS: } Operating System} was chosen at the time of container creation}). Once the software has been installed, any information for and/or data required by it is either loaded into the container or, in the case of data \underline{\emph{only}}, the container is "pointed at" the location of the data required by the software.  Finally, we must note that, as far as this paper and project are concerned, the use of a \emph{Docker} container as a means of implementation does not imply the use of any particular platform for running the containers, or even a deployment of the \emph{Docker} software/system itself. 
+
+
+\subsubsection{\underline{Running on a dedicated machine} (code: \textbf{C}) }
+The third system paradigm involves acquiring and configuring a dedicated machine which can be either an actual, physical machine or a virtual machine.  In either case, the machine will have performance specifications and and run an OS appropriate for our planed use.  When setting up one of these machines, after configuration and setup of physical/virtual system, the selected OS will be installed and configured for use.  Once it has been verified that the OS has been properly installed and configured (\emph{i.e. running stably}) we will install the software selected for testing on that instance, along with any other software or system components required to run that software.  After configuring the installed software, the machine will be prepared and configured for use as a server running said software.  The final step of this paradigm is preparing the software and system combination for final deployment to the selected platform.
+
+
+
+%---------------------------------------------------
+
+
+\subsection{Platforms}
+
+We have chosen four different platforms on which to deploy our systems.  The chosen platforms span the range of cloud service paradigms from \emph{SaaS} to \emph{PaaS}\footnote{\textbf{PaaS :} Platform as a service.} to \emph{IaaS}\footnote{\textbf{IaaS :} Infrastructure as a service.}.  We list the three platforms, along with two variations on one of the platforms, below
+
+\begin{spacing}{1.30}
+\begin{enumerate}[label=\large{\textbf{\arabic*}):}]
+		\item \textbf{(An) AWS Software Service (}\emph{SaaS}\textbf{)}
+		\item \textbf{Docker Container running on \emph{AWS's Container Service} (}\emph{PaaS}\textbf{)}
+		\item \textbf{Docker Container in a Docker Run-Time on an \emph{AWS EC2 VM} (}\emph{hybrid-Pass/IaaS}\textbf{)}
+		\item \textbf{AWS EC2 VMs running the software in Linux (}\emph{IaaS}\textbf{)}
+	\end{enumerate}
+\end{spacing}
+
+
+In the next section, we list which systems will run each software package, along with a explanation why each software-system pairing was chosen.  Additionally, we will describe which platforms will be used to deploy each system and why those deployment choices were made.  Before proceeding to that, and as with our list of system, we will describe each platform thoroughly.
+
+
+\subsubsection{\underline{AWS Software Service} (code: \textbf{1})}  
+The first platform we will use for the deployment of some systems is AWS's Software Service platform which provides various software packages which run as a service.  This means that Administrator do not have to configure and secure a server and OS on which to run the software, nor do they have to install and manage the running of the software on said server.  Instead, all a System Administrator must do is create an instance of the desired Software Service, with the configuration required for the application at hand.  Once the instance has been created, it is loaded with any information required and/or data to be used, after which it is immediately available for use by users and other clients. 
+
+
+\subsubsection{\underline{Docker Container running on \emph{AWS's Container Service}} (code: \textbf{2})}
+ In this version of the a container platform, we will deploy our containers by using AWS's Container Service.  When deploying to this platform, an Administrator first creates an appropriately configured instance of the Container Service.  Upon the successful creation and launch of the Container Service instance in question, the Administrator simply uploads the container being deployed to the instance and, if a data-source external to the container is required, uploads the required data to the location specified during the creation of the container.  Once the container has been uploaded to the instance (\emph{and any required data has been uploaded to the appropriate location}), the Administrator tests the instance to ensure it is functioning as expected.  In the last step, the Administrator configures the instance to properly connect with users and/or clients before finally granting them access to the deployed container. 
+
+
+\subsubsection{\underline{Docker Container in a Docker Run-Time on an \emph{AWS EC2 VM}} (code: \textbf{3})}
+The other version of a container deployment platform involves deploying our containers using a \emph{Docker} run-time/engine running in a Linux machine being hosted on AWS's EC2 Virtualization Platform.  To deploy via this platform, an Administrator begins by creating an EC2 VM instance with performance characteristics necessary for running the container inside the Linux version of \emph{Docker} run-time.  Once the EC2 VM instance has been created and successfully launched, the Administrator will install and configure an appropriate version of Linux, followed by installing the \emph{Docker} run-time and any required support software (\emph{such as software for accessing remotely stored data}).  After configuring the installation of the \emph{Docker} run-time (\emph{and any support software}), the Administrator will upload the container using \emph{Docker}.  Additionally, if a data-source external to the container is employed, up to two additional steps are required and based on whether the data is local or remote to the VM instance.  In the case the data-source is local to the VM instance, the Administrator must also configure appropriate storage on the instance, including installing and configuring any necessary software, after which the required data is uploaded to the storage location.  Similarly, if the data-source is external to the VM instance, the Administrator must also install and configure the software required for accessing the remote location (\emph{NFS, SAN, Samba, EBS, etc}), followed by configuring the system to access the remote location and the data stored within.  Once these steps are complete, the Administrator will be able configure the container to run on the VM instance, as well as configure the OS to allow the container to properly run.  These configurations involve ensuring that the container has access to the necessary networks, addresses, and ports and that any local and/or remote resources are both appropriately mounted to the container (\emph{container configuration}) and accessible to the container (\emph{OS configuration}).  With these configurations complete, the Administrator is able to launch the container and begin testing it to ensure it functions as expected.  Once the container has been determined to be properly functioning, the Administrator completes any configuration of the EC2 Instance, the VM itself (\emph{OS}), and the container itself which might be necessary for proper user and/or client access of the container.  This final configuration is followed, finally, by allowing users and clients to access the container.
+
+
+\subsubsection{\underline{A dedicated, non-virtualized server} (code: \textbf{4})}
+ Our fourth deployment platform paradigm also relies on use of AWS's EC2 VM service; however, instead of installing using containers as in \textbf{\underline{2ii}}, this paradigm has the software to be tested natively and directly installed on a Linux OS being run on an AWS EC2 VM instance.  As with the previous paradigm involving an AWS EC2 VM the Administrator begins by creating an EC2 VM instance, launching it, and installing an appropriate version of the Linux operating system, with the only difference being the determination of necessary performance characteristics base on natively running the software, and any supporting software, in Linux.  Following the installation and configuration of the Linux OS, the Administrator will natively install and then configure the software to be tested, along with any other software required support software (\emph{i.e. remote data access}).  These installations are followed by creating and configuring any required local storage space on the instance, to include installing and configuring any software necessary for doing this.  In the case where remote storage be used instead of or in addition to local storage, the Administrator must also install and configure the software required for accessing the remote location, followed by configuring the system to access the remote location and the data stored within.  Once these data storage/access steps have been completed, the Administrator uploads the required data to the appropriate location or locations, after which they configure both the software being tested, so that it can locate these data-sources, and the OS, so the software can access both the data-sources and any required networks, services, or ports.  As before, this configuration step is followed first by testing to ensure the software is accessible and works as desired, and then by the final step, allowing users and clients to access the container.
+
+
+
+%---------------------------------------------------
+%---------------------------------------------------
+
+
+
+\section{Changed Questions}
+
+Ultimately, we decided that our initial approach was too complex and beyond the intended scope of the project.  Therefore, were limited ourselves to comparing DynamoDB from AWS and BigTable from Google's Cloud Services.  Unfortunately, BigTable is difficult to deploy for even a simple test case so we were again forced to alter our plan, this time by swapping BigTable for CosmosDB from Azure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
