@@ -118,7 +118,7 @@ Finally, we wanted to see what tools each cloud provider had available for inter
 
 \subsection{Replication}
 
-The final area we were interested in covered database replication, as replication of a database improves its reliability and can improve its performance.  This lead us to ask, "\emph{\textbf{What kinds of replication are available and how are they accomplished?}}" as our fifth and final research question.  As we will see when we describe the experiments we ran, this also led to us attempting to run experiments with and without replication.
+The final area we were interested in covered database replication, as replication of a database improves its reliability and can improve its performance.  This lead us to ask, "\emph{\textbf{What kinds of replication are available and how are they accomplished?}}" as our fifth and final research question.  Finally, this question also led us to our first discovery.  We found that \textbf{\underline{AWS's DynamoDB}} does not offer replication as a single database between different AWS availability zones, while \textbf{\underline{Azure's CosmosDB}} does offer it between Azure's different availability zones.  As we will see when we describe the experiments we ran, this also led to us attempting to run experiments on \textbf{\underline{Azure's CosmosDB}} with and without replication between different Azure availability zones.
 
 
 
@@ -129,39 +129,96 @@ The final area we were interested in covered database replication, as replicatio
 
 \section{Experiments}
 
+The experiments we ran can be classified according to four distinct criteria, all based on one or more of our research questions.  These four criterial are as follows :
+
+\vspace{0.1in}
+\begin{spacing}{1.2}
+\begin{enumerate}[label=\large{\textbf{\arabic*}):}]
+	\item The subject of the experiment, where the subject is which service is being tested and if replication is being used, based on the availability of replication from the service in question.
+	\vspace{0.05in}
+	\item The primary metric of the experiment, with available primary metrics being either total data throughput\footnote{total data throughput = total number of database entries/items being pushed up to or pulled down from the database} and query latency.
+	\vspace{0.05in}
+	\item The throughput type being used or measured in the experiment, with the possible types of throughput being pushing data up to the database or pulling data down from the database.
+	\vspace{0.05in}
+	\item The load conditions under which the experiment was conducted, where the load condition is characterized by the level\footnote{level = measured as a fraction or percentage of the total provisioned read and/or write capacity.} and type\footnote{type of load = pushing data up, pulling data down, or some combination.} of load.
+\end{enumerate}
+\end{spacing}
 
 
+%--------------------------------
+
+\subsection{Subjects}
+
+We had three different classifications for the \emph{\textbf{subject}} of an experiment with one from AWS and two from Azure.  These experimental subject classifications are as follows : 
+
+\vspace{0.1in}
+\begin{spacing}{1.2}
+\begin{enumerate}[label=\Large{\textbf{\Alph*}):}]
+	\item AWS's DynamoDB
+	\vspace{0.05in}
+	\item Azure's CosmosDB \textbf{\underline{\emph{without}}} replication across availability zones.
+	\vspace{0.05in}
+	\item Azure's CosmosDB \textbf{\underline{\emph{with}}} replication across availability zones.
+\end{enumerate}
+\end{spacing}
 
 
+%--------------------------------
+
+\subsection{Primary Metrics}
+
+There were two primary metrics used in this project, with each experiment only measuring a single primary metric.  The primary metrics we used are :
+
+\vspace{0.1in}
+\begin{spacing}{1.2}
+\begin{enumerate}[label=\Large{\textbf{\Alph*}):}]
+	\item Data Throughput, measured in terms of the number of database entries/items being read and/or written per second (\textbf{items / sec} or \textbf{R/U}).
+	\vspace{0.05in}
+	\item Query Latency, which we measured in terms of the time (\textbf{milliseconds} or \textbf{ms}) required to return the result of a simple query\footnote{simple query = no joins, sorts, transforms, etc. just submit an index value and return the corresponding entry.}.
+\end{enumerate}
+\end{spacing}
 
 
+%--------------------------------
+
+\subsection{Throughput Types}
+
+We considered just two types of Data Throughput and we only considered them separately\footnote{"\emph{considered them separately} = i.e. one or the other, not both}.  These types of Data Throughput are as follows :
+
+\vspace{0.1in}
+\begin{spacing}{1.2}
+\begin{enumerate}[label=\Large{\textbf{\Alph*}):}]
+	\item Pushing, where we pushed data up to the database.
+	\vspace{0.05in}
+	\item Pulling, where were pull data down from the database.
+\end{enumerate}
+\end{spacing}
 
 
+%--------------------------------
 
+\subsection{Load Conditions}
 
+When running an experiment, we would use one of seven kinds load conditions, where each load condition is characterized in terms of two different parameters.  The parameters used to characterize each load condition were the level of load\footnote{level of load = as a fraction or percentage of the total provisioned I/O capacity} and the direction of the load.  The types of load conditions we use are as follows :
 
-
-
-
-
-
-
-
-
-
-
-
-
-%\vspace{0.1in}
-%\begin{spacing}{1.2}
-%\begin{enumerate}[label=\large{\textbf{3-\Alph*}):}]
-%	\item \textbf{\underline{None} :} No load on the database other than the query being measured.
-%	\vspace{0.05in}
-%	\item \textbf{\underline{Half-load pushing} :} Pushing data to the database at half of the provisioned write capacity.
-%	\vspace{0.05in}
-%	\item \textbf{\underline{Half-load 
-%\end{enumerate}
-%\end{spacing}
+\vspace{0.1in}
+\begin{spacing}{1.2}
+\begin{enumerate}[label=\large{\textbf{\Alph*}):}]
+	\item \textbf{\underline{None} :} No load on the database other than the query being measured.
+	\vspace{0.05in}
+	\item \textbf{\underline{Half-load pushing} :} Pushing data to the database at half of the provisioned write capacity.
+	\vspace{0.05in}
+	\item \textbf{\underline{Half-load pulling} :} Pulling data to the database at half of the provisioned write capacity.
+	\vspace{0.05in}
+	\item \textbf{\underline{Half-load pushing \emph{and} pulling} :} Pushing \emph{\textbf{and}} pulling data to the database at half of the provisioned total read/write capacity (\emph{applies to CosmosDB only}).
+	\vspace{0.05in}
+	\item \textbf{\underline{Full-load pushing} :} Pushing data to the database at the full provisioned write capacity.
+	\vspace{0.05in}
+	\item \textbf{\underline{Full-load pulling} :} Pulling data to the database at the full provisioned write capacity.
+	\vspace{0.05in}
+	\item \textbf{\underline{Full-load pushing \emph{and} pulling} :}. Pushing \emph{\textbf{and}} pulling data to the database at the full value of the provisioned total read/write capacity (\emph{applies to CosmosDB only}).
+\end{enumerate}
+\end{spacing}
 
 
 
